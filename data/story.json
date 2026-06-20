@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Story is DATA. Edit this file to revise narration, choices, flags, and endings. The engine (app.js) never needs to change. Render order per waypoint: text -> seasonalIntro(season) -> textCont -> variant(variants) -> endingVariant(endingVariants) -> textAfter, then choices, then the advance prompt."
+  },
+  "config": {
+    "dryMonths": [7, 8, 9],
+    "dryNote": "Months (1-12) when the pond reads as dry. All other months read as wet/full."
+  },
+  "flags": ["have_honeycake", "kind_to_fox", "fooled_by_wisp", "brave"],
+  "collectibles": {
+    "crown": ["cap_kindness", "cap_cleverness", "cap_courage"]
+  },
+  "voices": {
+    "narrator": "Narrator (low, warm)",
+    "moth": "The Lantern-Moth (faint, guttering, sacrificial)",
+    "fox": "The Fox (a thread of a voice, then warm)",
+    "wisp": "The Will-o'-the-Wisp (sweet, then cruel)",
+    "knight": "The Stone Knight / dead captain (vast, grief-worn)",
+    "king": "King Bolete (ancient, failing, near a whisper)"
+  },
+  "stories": {
+    "crown": {
+      "title": "The Crown of the Mushroom King",
+      "blurb": "A shadowed wood, for the brave.",
+      "tone": "dark",
+      "start": "wp1",
+      "capLabels": {
+        "cap_kindness": "Cap of Kindness",
+        "cap_cleverness": "Cap of Cleverness",
+        "cap_courage": "Cap of Courage"
+      },
+      "waypoints": {
+        "wp1": {
+          "n": 1,
+          "title": "The Entrance",
+          "voice": "moth",
+          "audio": "crown/wp1.mp3",
+          "image": "crown/wp1.jpg",
+          "setFlags": { "have_honeycake": true },
+          "text": "A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”\n\nBehind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.\n\n“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”\n\nIt presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”",
+          "next": "wp2"
+        },
+        "wp2": {
+          "n": 2,
+          "title": "Into the Forest",
+          "voice": "narrator",
+          "audio": "crown/wp2.mp3",
+          "image": "crown/wp2.jpg",
+          "text": "You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.\n\nAnd the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.” It flickers. “Wake the king, traveler, and you may yet hear them sing again.”\n\nFar off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails.” It gathers itself. “Three caps. One lies where a dying friend keeps watch. One where a false light feeds. One among the dead who were never avenged. Find them before the bell goes silent.”\n\nThe signpost leans, half-rotted, pointing the way in. You follow it deeper into the dark.",
+          "next": "wp3"
+        },
+        "wp3": {
+          "n": 3,
+          "title": "The Great Old Tree",
+          "voice": "fox",
+          "image": "crown/wp3.jpg",
+          "collectLabel": "Cap of Kindness",
+          "text": "Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.\n\n“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long.",
+          "prompt": "Give him the honey-cake, or keep it?",
+          "choices": [
+            {
+              "label": "Give the honey-cake",
+              "setFlags": { "kind_to_fox": true },
+              "collect": "cap_kindness",
+              "audio": "crown/wp3_give.mp3",
+              "text": "He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, and every other light has failed you — look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you."
+            },
+            {
+              "label": "Keep it for yourself",
+              "setFlags": { "kind_to_fox": false },
+              "collect": "cap_kindness",
+              "audio": "crown/wp3_keep.mp3",
+              "text": "You close your hand around the honey-cake and step around him. The fox says nothing — only watches you pass with his one silver eye, and you feel that eye on your back long after the trees have hidden him. There, in the leaves where he lies, the first golden cap gleams; it was the king’s, and the fox had no strength left to guard it. You lift it. Behind you, the old fox lowers his head to the cold ground. He will not see the morning, and the eye that might have watched over you in the dark goes dim."
+            }
+          ],
+          "next": "wp4"
+        },
+        "wp4": {
+          "n": 4,
+          "title": "The Fork",
+          "voice": "wisp",
+          "image": "crown/wp4.jpg",
+          "collectLabel": "Cap of Cleverness",
+          "wayfinding": "Take the path to your RIGHT. Do not continue straight.",
+          "text": "The path forks at a leaning post. The plain way bends off to your right — but straight ahead, where the trail runs on into the trees, a light is waiting. It is beautiful: a soft blue glow drifting in the dark, its voice cool and sweet as well-water. “Straight on, traveler — don’t turn aside. The straight way is the short way, the kind way. You’re so tired; let me lead you home.”\n\nBut the moth on your shoulder has gone rigid, its light pressed small. “That is the corpse-light,” it breathes. “Raggeth’s lure. It wants you to walk straight on. Look at the ground ahead — look.”\n\nAnd you see them now, half-sunk in the moss along the path that runs straight on: bones. The picked-clean bones of travelers who kept walking toward the lovely light before you — travelers who were tired, and trusting, and clever enough, they thought. The right-hand path holds no such light. It only holds the way through.",
+          "prompt": "Walk straight toward the light, or turn right?",
+          "choices": [
+            {
+              "label": "Walk straight toward the blue light",
+              "setFlags": { "fooled_by_wisp": true },
+              "collect": "cap_cleverness",
+              "audio": "crown/wp4_straight.mp3",
+              "text": "You take one step on toward it, then another — it is so warm, and you are so tired — and the instant you pass the fork the light bursts white and dies, and the dark slams down like a lid. You cannot see your own hands. Something close by laughs, low and pleased, and a voice you have not heard before, dry as old leaves, says your name. Raggeth. You stumble back. You fall. And then — a small silver gleam in all that black: the fox’s eye, if you were kind to him; the moth’s last guttering light, if you were not. It leads you back to the fork and turns you firmly onto the right-hand path. The second golden cap lies in the moss where you fell. You take it and do not look back. “Cleverness,” the moth whispers, shaken, “you’ll buy dearer next time. Now — right. Always right.”"
+            },
+            {
+              "label": "Turn right",
+              "setFlags": { "fooled_by_wisp": false },
+              "collect": "cap_cleverness",
+              "audio": "crown/wp4_right.mp3",
+              "text": "You turn your back on the light and take the plain right-hand path. Behind you the wisp’s sweetness curdles — to a shriek, to a hiss, to nothing — Raggeth’s lure, starved of you. There at the fork, just along the right-hand way, the second golden cap gleams in the moss. You lift it gently. “Cleverness is the second gold,” the moth says quietly. “Those others were not foolish — only trusting. They walked straight on. You did not. Remember that.”"
+            }
+          ],
+          "next": "wp5"
+        },
+        "wp5": {
+          "n": 5,
+          "title": "The Cemetery",
+          "voice": "knight",
+          "image": "crown/wp5.jpg",
+          "collectLabel": "Cap of Courage",
+          "text": "The trees give way to a small graveyard — a dozen old stones, maybe, leaning every which way in the grey light. These are the king’s knights, the last of the old mushroom-guard, who stood against Raggeth an age ago and fell to the last, and were never avenged. The wood forgot them. The rot has not — it creeps among the stones like spilled ink.\n\nAt the center stands one great cracked stone, and at its foot a candle, long gone cold. “The last cap is here,” the moth breathes, “in the keeping of the dead. They will not give it to the timid. You must wake their captain — and you must not look away when he wakes.”",
+          "prompt": "Light the candle and wake the guardian, or tiptoe past?",
+          "choices": [
+            {
+              "label": "Light the candle",
+              "setFlags": { "brave": true },
+              "collect": "cap_courage",
+              "audio": "crown/wp5_light.mp3",
+              "text": "Your hands shake so badly you can barely breathe on the wick — but it catches, one small gold flame in a sea of grey. The great stone splits. Something rises from it: a knight of blackened oak and toadstool, vast, its eyes two coals, an age of grief in its ruined face. It would be so easy to run. You do not run. For a long, cold moment the dead captain weighs you — then slowly bows. “Courage,” it says, in a voice like a closing tomb, “is the last gold, and it is bought with fear, not the lack of it.” It lays the third cap in your hand. “Mend his crown. And when you face Raggeth — for you will — do not look away from him either. We could not save the king. Perhaps you will.” The dead sink back into their stones. Behind you the candle burns on, the only warm thing in the wood."
+            },
+            {
+              "label": "Tiptoe quietly past",
+              "setFlags": { "brave": false },
+              "collect": "cap_courage",
+              "audio": "crown/wp5_past.mp3",
+              "text": "You cannot do it. You hold your breath and slip between the graves, quiet as the dead themselves, and you do not light the candle, and you do not wake the captain. The last cap you find at the graveyard’s edge, set upon a small stone — a young knight’s grave, one who fell too soon. You lift it from the dead with hands that will not stop shaking, and all across that little ground you feel the weight of eyes that hoped for more from you, and let you pass anyway. Nothing follows you out. Somehow that is worse."
+            }
+          ],
+          "next": "wp6"
+        },
+        "wp6": {
+          "n": 6,
+          "title": "The Way to the Pond",
+          "voice": "narrator",
+          "audio": "crown/wp6.mp3",
+          "image": "crown/wp6.jpg",
+          "text": "Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.\n\n“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.",
+          "next": "wp7"
+        },
+        "wp7": {
+          "n": 7,
+          "title": "The Pond",
+          "voice": "king",
+          "image": "crown/wp7.jpg",
+          "text": "The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.",
+          "seasonalIntro": [
+            {
+              "when": "wet",
+              "audio": "crown/wp7_full.mp3",
+              "text": "The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”"
+            },
+            {
+              "when": "dry",
+              "audio": "crown/wp7_dry.mp3",
+              "text": "Where deep water should be there is only a cracked and shrinking hollow, a last puddle sinking into mud. “The pond drains as the king does,” the moth breathes. “Nearly empty now. We are nearly too late.”"
+            }
+          ],
+          "textCont": "On a toadstool throne at the water’s edge sits King Bolete — or what remains of him. He is grey to the bone and cracked like old wood, the mushrooms of his crown wilted brown. The dimming is nearly complete.\n\n“You came,” he says, no louder than a breath. “I had stopped hoping. And you carry my gold — I feel it.” A tremor that might once have been a smile. “Then set it right, child. Set the caps back upon the crown, and let us see what the night decides.”\n\nYou kneel at the throne. One for a kindness, one for a cleverness, one for a courage — you press the three golden caps home into the bare ring of the crown.",
+          "endingVariants": [
+            {
+              "when": { "allTrue": ["kind_to_fox", "brave"], "allFalse": ["fooled_by_wisp"] },
+              "audio": "crown/end_warm.mp3",
+              "text": "The moment the last cap touches the crown, light runs through it like dawn through water — and it does not stop. It pours from the king into the throne, into the roots, out through the whole black wood. King Bolete straightens, grey going green, his crown blazing gold, and all around the pond the dying simply stops. And from the shadows, your friends come to stand with you: the silver-eyed fox, the dead captain bowing his ancient head, the moth blazing whole and bright again. “You did not walk my wood alone,” the king says, “because you would not let others walk theirs alone. The forest will not forget you. It never forgets.”"
+            },
+            {
+              "when": { "allFalse": ["kind_to_fox", "brave"], "allTrue": ["fooled_by_wisp"] },
+              "audio": "crown/end_cold.mp3",
+              "text": "The last cap touches the crown, and a pale light wakes in it — thin, and cold, but enough. The king draws a slow breath, and his eyes open, and the dying stops. The wood will live. But the light is small, and no friends come from the shadows to stand at your side, and the king looks at you a long moment with something like sorrow. “You have saved my forest,” he says quietly. “I only wish you had saved a little more along the way. Still — it is saved, and that is no small thing. Go gently. Perhaps the wood will yet teach you what the road did not.”"
+            },
+            {
+              "default": true,
+              "audio": "crown/end_mixed.mp3",
+              "text": "Light wakes in the crown and spreads — warm in places, thin in others, like a fire catching unevenly. The king revives, the wood will live, and some of those you met along the way come to stand with you, while others do not. The king’s gratitude is real, and quieter than it might have been. “You saved my forest,” he says. “Remember the ones you helped. And the one you did not.”"
+            }
+          ],
+          "textAfter": "His eyes close again — gently now, in rest, not in ruin. “Go,” he breathes. “Walk on, if you will, and see what your hands have done. The forest would like to show you.”",
+          "next": "meadow"
+        },
+        "meadow": {
+          "title": "The Meadow",
+          "voice": "narrator",
+          "image": "crown/meadow.jpg",
+          "gateless": true,
+          "optional": true,
+          "text": "You walk on from the pond, and the wood is changing around you. The rot draws back into the earth. Birdsong returns, one note, then another. And the faces in the trees — the old sentinels who watched you pass in silence on the way in — are waking. One by one their eyes open as you go by; their grave mouths soften; and some of them, very quietly, begin to hum.",
+          "variants": [
+            {
+              "when": { "allTrue": ["kind_to_fox", "brave"] },
+              "text": "They are beaming at you, the whole wood of them, and their humming swells into something like a song. They know what you did, and they are glad."
+            },
+            {
+              "default": true,
+              "text": "Their eyes open, and they watch you pass — not unkindly, but soberly, the way someone looks at you when they know more than they will say. The wood remembers the fox too. Still, here and there, an old face softens. It is a beginning."
+            }
+          ],
+          "textAfter": "The trees draw back, and the path brings you out of the dark at last into a wide and sunlit meadow — green and gold, thick with flowers, loud with bees: the whole bright opposite of the wood you walked. This is the heart of the king’s land, made well again. And you are the one who made it so. Rest here a while. You have earned the light.",
+          "end": true,
+          "endNote": "THE END — for now."
+        }
+      }
+    }
+  }
+}

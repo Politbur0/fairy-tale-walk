@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fairy Tale Walk · Hilltop Enchanted Forest</title>
+  <meta name="description" content="A self-guided choose-your-own-adventure walk along the Hilltop Enchanted Forest trail. Scan a post, read the tale, choose your path.">
+  <meta name="theme-color" content="#14180f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fairy Tale Walk">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="bg-vignette" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#">Hilltop <span>Enchanted Forest</span></a>
+    <div id="capbar" class="capbar" hidden></div>
+  </header>
+
+  <main id="app" class="app">
+    <section class="screen notice">
+      <h1 class="title">Loading the wood…</h1>
+    </section>
+  </main>
+
+  <footer class="footnote">Walk gently. Trust no light but the moth’s.</footer>
+
+  <script src="./app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function (e) {
+          console.warn('SW registration failed', e);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
