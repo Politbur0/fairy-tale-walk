@@ -1,8 +1,16 @@
 /* Fairy Tale Walk — engine.
  *
- * The story is DATA (data/story.json). This file renders it and never needs to
- * change when the story is revised. Routing is by URL hash so waypoint QR codes
- * work fully offline: e.g.  #crown/wp4  or  #crown/4  (also ?s=crown&wp=4).
+ * The story is DATA (data/story.json). This file renders it and rarely changes.
+ * Routing is by URL hash so waypoint QR codes work fully offline:
+ *   #crown/wp4   (also  #crown/4 ,  or  ?s=crown&wp=4)
+ *
+ * v2 capabilities (Crown branch blueprint):
+ *  - condition ops: allTrue / allFalse / anyTrue / anyFalse / equals / notEquals
+ *  - scenes: a waypoint can hold road-specific sub-scenes, each with its OWN
+ *    text/prompt/choices/wayfinding/next — picked by `when` (e.g. equals road).
+ *  - endings: a scene, a chosen choice, or a picked endingVariant may carry an
+ *    `ending` { tone, note, exits[] }. Exits render as a flee/accept/commit
+ *    screen so a "bad ending" never strands a walker — feet always get out.
  */
 (function () {
   'use strict';
@@ -10,8 +18,8 @@
   var STORY_URL = './data/story.json';
   var LS_KEY = 'ftw_v1';
 
-  var DATA = null;            // the whole story file
-  var states = {};            // { storyId: state } — progress per story, persisted
+  var DATA = null;
+  var states = {};
   var app = document.getElementById('app');
   var capBar = document.getElementById('capbar');
 
@@ -23,40 +31,33 @@
     } catch (e) { states = {}; }
   }
   function save() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ v: 1, states: states })); } catch (e) {}
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ v: 2, states: states })); } catch (e) {}
   }
   function freshState(storyId) {
-    return { storyId: storyId, flags: {}, collected: [], applied: {}, resolved: {}, currentWp: null };
+    return { storyId: storyId, flags: {}, collected: [], applied: {}, resolved: {}, committed: {}, scene: {}, currentWp: null };
   }
   function stateFor(storyId) {
     if (!states[storyId]) states[storyId] = freshState(storyId);
-    return states[storyId];
+    var s = states[storyId];
+    s.applied = s.applied || {}; s.resolved = s.resolved || {}; s.committed = s.committed || {}; s.scene = s.scene || {};
+    return s;
   }
 
   // ---------- routing ----------
-  function normWp(w) {
-    if (!w) return null;
-    return /^\d+$/.test(w) ? 'wp' + w : w;
-  }
+  function normWp(w) { return !w ? null : (/^\d+$/.test(w) ? 'wp' + w : w); }
   function parseRoute() {
     var h = (location.hash || '').replace(/^#\/?/, '');
-    if (h) {
-      var parts = h.split('/');
-      return { storyId: parts[0] || null, wp: normWp(parts[1]) };
-    }
+    if (h) { var p = h.split('/'); return { storyId: p[0] || null, wp: normWp(p[1]) }; }
     var q = new URLSearchParams(location.search);
     if (q.get('s')) return { storyId: q.get('s'), wp: normWp(q.get('wp')) };
     return { storyId: null, wp: null };
   }
-  function go(storyId, wpId) {
-    location.hash = '#' + storyId + (wpId ? '/' + wpId : '');
-  }
+  function go(storyId, wpId) { location.hash = '#' + storyId + (wpId ? '/' + wpId : ''); }
 
   // ---------- season ----------
   function season() {
     var dry = (DATA.config && DATA.config.dryMonths) || [7, 8, 9];
-    var m = new Date().getMonth() + 1;
-    return dry.indexOf(m) !== -1 ? 'dry' : 'wet';
+    return dry.indexOf(new Date().getMonth() + 1) !== -1 ? 'dry' : 'wet';
   }
 
   // ---------- condition evaluation ----------
@@ -64,11 +65,13 @@
   function condMet(state, when) {
     if (!when) return false;
     if (when.default) return true;
-    var ok = true;
-    if (when.allTrue) ok = ok && when.allTrue.every(function (f) { return flagOn(state, f); });
-    if (when.allFalse) ok = ok && when.allFalse.every(function (f) { return !flagOn(state, f); });
-    if (when.anyTrue) ok = ok && when.anyTrue.some(function (f) { return flagOn(state, f); });
-    if (when.anyFalse) ok = ok && when.anyFalse.some(function (f) { return !flagOn(state, f); });
+    var f = state.flags, ok = true;
+    if (when.allTrue) ok = ok && when.allTrue.every(function (n) { return !!f[n]; });
+    if (when.allFalse) ok = ok && when.allFalse.every(function (n) { return !f[n]; });
+    if (when.anyTrue) ok = ok && when.anyTrue.some(function (n) { return !!f[n]; });
+    if (when.anyFalse) ok = ok && when.anyFalse.some(function (n) { return !f[n]; });
+    if (when.equals) ok = ok && Object.keys(when.equals).every(function (k) { return f[k] === when.equals[k]; });
+    if (when.notEquals) ok = ok && Object.keys(when.notEquals).every(function (k) { return f[k] !== when.notEquals[k]; });
     return ok;
   }
   // top-down: first entry whose `when` matches wins; else the `default` entry.
@@ -83,6 +86,32 @@
     return def;
   }
 
+  // ---------- scene resolution (road branching) ----------
+  // first-match index (or the default's index, else -1)
+  function pickSceneIndex(state, list) {
+    var def = -1;
+    for (var i = 0; i < list.length; i++) {
+      var v = list[i];
+      if (v.default) { if (def < 0) def = i; continue; }
+      if (condMet(state, v.when)) return i;
+    }
+    return def;
+  }
+  // Merge the matching sub-scene over the waypoint's shared fields. The chosen
+  // scene is PINNED per waypoint on first entry, so a choice that changes a
+  // scene-selecting flag (e.g. burning off `marked_dark`) doesn't swap the
+  // scene — and its choices — out from under the walker on re-render/reload.
+  function resolveScene(state, wp, wpId) {
+    if (!wp.scenes) return wp;
+    var idx = state.scene[wpId];
+    if (idx == null) { idx = pickSceneIndex(state, wp.scenes); state.scene[wpId] = idx; }
+    var sc = wp.scenes[idx] || {};
+    var merged = {}, k;
+    for (k in wp) if (k !== 'scenes') merged[k] = wp[k];
+    for (k in sc) if (k !== 'when' && k !== 'default') merged[k] = sc[k];
+    return merged;
+  }
+
   // ---------- effects ----------
   function applyEffects(state, o) {
     if (!o) return;
@@ -90,7 +119,7 @@
     if (o.collect && state.collected.indexOf(o.collect) === -1) state.collected.push(o.collect);
   }
 
-  // ---------- small DOM helpers ----------
+  // ---------- DOM helpers ----------
   function el(tag, cls, text) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
@@ -99,17 +128,12 @@
   }
   function paragraphs(parent, text) {
     if (!text) return;
-    text.split(/\n\n+/).forEach(function (p) {
-      parent.appendChild(el('p', 'prose', p));
-    });
+    text.split(/\n\n+/).forEach(function (p) { parent.appendChild(el('p', 'prose', p)); });
   }
-  // <audio> / <img> that simply remove themselves if the asset isn't bundled yet
   function mediaAudio(src) {
     if (!src) return null;
     var a = document.createElement('audio');
-    a.className = 'scene-audio';
-    a.controls = true;
-    a.preload = 'none';
+    a.className = 'scene-audio'; a.controls = true; a.preload = 'none';
     a.src = './audio/' + src;
     a.addEventListener('error', function () { a.remove(); });
     return a;
@@ -117,28 +141,23 @@
   function mediaImage(src, alt) {
     if (!src) return null;
     var im = document.createElement('img');
-    im.className = 'scene-img';
-    im.loading = 'lazy';
-    im.alt = alt || '';
+    im.className = 'scene-img'; im.loading = 'lazy'; im.alt = alt || '';
     im.src = './img/' + src;
     im.addEventListener('error', function () { im.remove(); });
     return im;
   }
 
-  // ---------- chrome (cap counter) ----------
+  // ---------- cap counter ----------
   function renderCapBar(state) {
     capBar.innerHTML = '';
-    if (!state) { capBar.hidden = true; return; }
-    var story = DATA.stories[state.storyId];
-    var all = (DATA.collectibles && DATA.collectibles[state.storyId]) || [];
-    if (!all.length) { capBar.hidden = true; return; }
+    var all = state ? ((DATA.collectibles && DATA.collectibles[state.storyId]) || []) : [];
+    if (!state || !all.length) { capBar.hidden = true; return; }
     capBar.hidden = false;
-    var label = el('span', 'cap-count', 'Caps: ' + state.collected.length + ' of ' + all.length);
-    capBar.appendChild(label);
+    var story = DATA.stories[state.storyId];
+    capBar.appendChild(el('span', 'cap-count', 'Caps: ' + state.collected.length + ' of ' + all.length));
     var dots = el('span', 'cap-dots');
     all.forEach(function (id) {
-      var got = state.collected.indexOf(id) !== -1;
-      var d = el('span', 'cap-dot' + (got ? ' got' : ''));
+      var d = el('span', 'cap-dot' + (state.collected.indexOf(id) !== -1 ? ' got' : ''));
       d.title = (story.capLabels && story.capLabels[id]) || id;
       dots.appendChild(d);
     });
@@ -148,29 +167,22 @@
     capBar.appendChild(over);
   }
 
-  // ---------- screens ----------
   function clear() { app.innerHTML = ''; }
 
+  // ---------- story select ----------
   function showStorySelect() {
-    clear();
-    renderCapBar(null);
+    clear(); renderCapBar(null);
     var wrap = el('section', 'screen select');
     wrap.appendChild(el('p', 'eyebrow', 'Hilltop Enchanted Forest'));
     wrap.appendChild(el('h1', 'title', 'Choose your tale'));
     wrap.appendChild(el('p', 'lede', 'A self-guided walk. At each post along the trail, scan its code (or type its number) to unlock the next part of the story. Your choices are remembered and shape how it ends.'));
-
-    var ids = Object.keys(DATA.stories);
-    ids.forEach(function (id) {
-      var s = DATA.stories[id];
+    Object.keys(DATA.stories).forEach(function (id) {
+      var s = DATA.stories[id], st = states[id];
       var card = el('button', 'story-card tone-' + (s.tone || 'dark'));
       card.appendChild(el('span', 'story-title', s.title));
       if (s.blurb) card.appendChild(el('span', 'story-blurb', s.blurb));
-      var st = states[id];
       if (st && st.currentWp) card.appendChild(el('span', 'story-resume', 'Continue where you left off'));
-      card.addEventListener('click', function () {
-        var start = (st && st.currentWp) ? st.currentWp : s.start;
-        go(id, start);
-      });
+      card.addEventListener('click', function () { go(id, (st && st.currentWp) ? st.currentWp : s.start); });
       wrap.appendChild(card);
     });
     app.appendChild(wrap);
@@ -188,15 +200,12 @@
     app.appendChild(wrap);
   }
 
-  // manual "enter post number" fallback for when a camera won't focus
   function numberEntry(storyId) {
     var form = el('form', 'num-entry');
     var input = el('input', 'num-input');
     input.type = 'number'; input.min = '1'; input.inputMode = 'numeric';
-    input.placeholder = 'Post #';
-    input.setAttribute('aria-label', 'Enter post number');
-    var btn = el('button', 'btn small', 'Go');
-    btn.type = 'submit';
+    input.placeholder = 'Post #'; input.setAttribute('aria-label', 'Enter post number');
+    var btn = el('button', 'btn small', 'Go'); btn.type = 'submit';
     form.appendChild(input); form.appendChild(btn);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -206,133 +215,150 @@
     return form;
   }
 
+  // ---------- the waypoint screen ----------
   function showWaypoint(storyId, wpId) {
     var story = DATA.stories[storyId];
-    var wp = story.waypoints[wpId];
-    if (!wp) { showUnknown(storyId, wpId); return; }
+    var base = story.waypoints[wpId];
+    if (!base) { showUnknown(storyId, wpId); return; }
 
     var state = stateFor(storyId);
     state.currentWp = wpId;
+    var sc = resolveScene(state, base, wpId);
 
-    // entry-level effects (e.g. wp1 grants the honey-cake) — once per waypoint
-    if (!state.applied[wpId]) { applyEffects(state, wp); state.applied[wpId] = true; }
+    if (!state.applied[wpId]) { applyEffects(state, sc); state.applied[wpId] = true; }
 
-    var hasChoice = !!(wp.choices && wp.choices.length);
-    var resolvedIdx = state.resolved[wpId];
-    var resolved = resolvedIdx != null ? wp.choices[resolvedIdx] : null;
+    var committed = !!state.committed[wpId];
+    var hasChoice = !committed && !!(sc.choices && sc.choices.length);
+    var resolvedIdx = committed ? null : state.resolved[wpId];
+    var resolved = (resolvedIdx != null) ? sc.choices[resolvedIdx] : null;
+    var settled = !hasChoice || resolved;   // choices done (or none) -> endings may show
 
-    clear();
-    renderCapBar(state);
+    clear(); renderCapBar(state);
     var scene = el('section', 'screen scene');
 
-    // header
     var head = el('div', 'scene-head');
-    if (wp.n) head.appendChild(el('span', 'post-no', 'Post ' + wp.n));
-    head.appendChild(el('h1', 'scene-title', wp.title || ''));
-    if (wp.voice && DATA.voices && DATA.voices[wp.voice]) {
-      head.appendChild(el('span', 'voice', DATA.voices[wp.voice]));
-    }
+    if (sc.n) head.appendChild(el('span', 'post-no', 'Post ' + sc.n));
+    head.appendChild(el('h1', 'scene-title', sc.title || ''));
+    if (sc.voice && DATA.voices && DATA.voices[sc.voice]) head.appendChild(el('span', 'voice', DATA.voices[sc.voice]));
     scene.appendChild(head);
 
-    // optional image
-    var img = mediaImage(wp.image, wp.title);
+    var img = mediaImage(sc.image, sc.title);
     if (img) scene.appendChild(img);
 
-    // narration assembly: text -> seasonalIntro -> textCont -> variant -> ending -> textAfter
-    var body = el('div', 'scene-body');
-    var audios = [];
-
-    paragraphs(body, wp.text);
-
-    // the result narration of a choice already made (shown on re-render / reload)
+    // narration: text -> choice result -> seasonalIntro -> textCont -> variant -> endingVariant -> textAfter
+    var body = el('div', 'scene-body'), audios = [];
+    paragraphs(body, sc.text);
     if (resolved) { paragraphs(body, resolved.text); if (resolved.audio) audios.push(resolved.audio); }
 
-    if (wp.seasonalIntro) {
-      var s = season();
-      var intro = wp.seasonalIntro.filter(function (x) { return x.when === s; })[0] || wp.seasonalIntro[0];
-      if (intro) { paragraphs(body, intro.text); if (intro.audio) audios.push(intro.audio); }
+    if (sc.seasonalIntro) {
+      var sIntro = sc.seasonalIntro.filter(function (x) { return x.when === season(); })[0] || sc.seasonalIntro[0];
+      if (sIntro) { paragraphs(body, sIntro.text); if (sIntro.audio) audios.push(sIntro.audio); }
     }
-    paragraphs(body, wp.textCont);
-
-    if (wp.variants) {
-      var variant = pickVariant(state, wp.variants);
+    paragraphs(body, sc.textCont);
+    if (sc.variants) {
+      var variant = pickVariant(state, sc.variants);
       if (variant) { paragraphs(body, variant.text); if (variant.audio) audios.push(variant.audio); }
     }
-    if (wp.endingVariants) {
-      var ending = pickVariant(state, wp.endingVariants);
-      if (ending) { paragraphs(body, ending.text); if (ending.audio) audios.push(ending.audio); }
+    var pickedEnding = null;
+    if (settled && sc.endingVariants) {
+      pickedEnding = pickVariant(state, sc.endingVariants);
+      if (pickedEnding) { paragraphs(body, pickedEnding.text); if (pickedEnding.audio) audios.push(pickedEnding.audio); }
     }
-    paragraphs(body, wp.textAfter);
-
-    if (wp.audio) audios.unshift(wp.audio);
+    paragraphs(body, sc.textAfter);
+    if (sc.audio) audios.unshift(sc.audio);
     scene.appendChild(body);
-
-    // audio players (hide themselves until the mp3s are bundled)
     audios.forEach(function (a) { var node = mediaAudio(a); if (node) scene.appendChild(node); });
 
-    // collectible just gained
-    if (resolved && resolved.collect) {
-      scene.appendChild(capToast(story, resolved.collect));
-    } else if (!hasChoice && wp.collect) {
-      scene.appendChild(capToast(story, wp.collect));
-    }
+    // collectible gained
+    var gained = resolved && resolved.collect ? resolved.collect : (!hasChoice && sc.collect ? sc.collect : null);
+    if (gained) scene.appendChild(capToast(story, gained));
 
-    // choices, or result + advance
-    if (hasChoice && !resolved) {
-      if (wp.prompt) scene.appendChild(el('p', 'choice-prompt', wp.prompt));
+    // footer: ending screen, choices, or advance
+    var endInfo = (resolved && resolved.ending) || (pickedEnding && pickedEnding.ending) ||
+                  (!committed && sc.ending) || (sc.end ? { note: sc.endNote || 'The End' } : null);
+
+    if (endInfo) {
+      scene.appendChild(renderEnding(storyId, wpId, endInfo));
+    } else if (hasChoice && !resolved) {
+      if (sc.prompt) scene.appendChild(el('p', 'choice-prompt', sc.prompt));
       var choices = el('div', 'choices');
-      wp.choices.forEach(function (c, i) {
-        var b = el('button', 'btn choice');
-        b.textContent = c.label;
+      sc.choices.forEach(function (c, i) {
+        var b = el('button', 'btn choice' + (c.danger ? ' danger' : ''), c.label);
         b.addEventListener('click', function () {
           applyEffects(state, c);
-          state.resolved[wpId] = i;
-          save();
-          showWaypoint(storyId, wpId); // re-render with the chosen result
-          window.scrollTo(0, 0);
+          state.resolved[wpId] = i; save();
+          showWaypoint(storyId, wpId); window.scrollTo(0, 0);
         });
         choices.appendChild(b);
       });
       scene.appendChild(choices);
     } else {
-      scene.appendChild(advance(story, storyId, wp));
+      scene.appendChild(advance(story, storyId, sc));
     }
 
-    // wayfinding banner (fixed, unmissable) — present whenever the data declares it
-    if (wp.wayfinding) scene.appendChild(wayBanner(wp.wayfinding));
+    if (sc.wayfinding) scene.appendChild(wayBanner(sc.wayfinding));
 
     app.appendChild(scene);
     save();
   }
 
   function capToast(story, capId) {
-    var label = (story.capLabels && story.capLabels[capId]) || capId;
     var t = el('div', 'cap-toast');
     t.appendChild(el('span', 'cap-toast-icon', '✦'));
-    t.appendChild(el('span', null, 'You gather the ' + label + '.'));
+    t.appendChild(el('span', null, 'You gather the ' + ((story.capLabels && story.capLabels[capId]) || capId) + '.'));
     return t;
   }
 
-  function advance(story, storyId, wp) {
+  // ---------- ending / bad-ending screen ----------
+  function renderEnding(storyId, wpId, info) {
+    var box = el('div', 'advance ending tone-' + (info.tone || 'good'));
+    if (info.note) box.appendChild(el('p', 'the-end', info.note));
+    var reveal = el('div', 'ending-reveal');
+    box.appendChild(reveal);
+    var exits = info.exits || [];
+    if (!exits.length) { box.appendChild(startOverButton()); return box; }
+
+    var btns = el('div', 'choices');
+    exits.forEach(function (ex) {
+      var b = el('button', 'btn' + (ex.danger ? ' danger' : ' choice'), ex.label);
+      b.addEventListener('click', function () {
+        if (ex.commit) { commitWaypoint(storyId, wpId); return; }
+        if (ex.next) { go(storyId, ex.next); window.scrollTo(0, 0); return; }
+        if (ex.reveal) paragraphs(reveal, ex.reveal);   // terminal flee/accept
+        btns.remove();
+        reveal.appendChild(startOverButton());
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+      btns.appendChild(b);
+    });
+    box.appendChild(btns);
+    return box;
+  }
+
+  function startOverButton() {
+    var again = el('button', 'btn', 'Walk it again');
+    again.addEventListener('click', startOver);
+    return again;
+  }
+
+  function commitWaypoint(storyId, wpId) {
+    var st = stateFor(storyId);
+    st.committed[wpId] = true; delete st.resolved[wpId]; save();
+    showWaypoint(storyId, wpId); window.scrollTo(0, 0);
+  }
+
+  function advance(story, storyId, sc) {
     var box = el('div', 'advance');
-    if (wp.end) {
-      box.appendChild(el('p', 'the-end', wp.endNote || 'The End'));
-      var again = el('button', 'btn', 'Walk it again');
-      again.addEventListener('click', startOver);
-      box.appendChild(again);
-      return box;
-    }
-    var next = wp.next ? story.waypoints[wp.next] : null;
+    var next = sc.next ? story.waypoints[sc.next] : null;
     if (next && next.gateless) {
-      // reached on foot, no post to scan (e.g. the meadow coda)
       var on = el('button', 'btn', 'Walk on ▸');
-      on.addEventListener('click', function () { go(storyId, wp.next); window.scrollTo(0, 0); });
+      on.addEventListener('click', function () { go(storyId, sc.next); window.scrollTo(0, 0); });
       box.appendChild(on);
       return box;
     }
     if (next) {
-      var n = next.n ? ('Post ' + next.n) : 'the next post';
-      box.appendChild(el('p', 'advance-hint', 'Now find ' + n + ' on the trail and scan its code to continue.'));
+      var label = next.n ? ('Post ' + next.n) : 'the next post';
+      box.appendChild(el('p', 'advance-hint', 'Now find ' + label + ' on the trail and scan its code to continue.'));
       box.appendChild(el('p', 'advance-sub', 'Camera won’t focus? Enter the post number:'));
       box.appendChild(numberEntry(storyId));
     }
@@ -347,26 +373,18 @@
   }
 
   function startOver() {
-    var route = parseRoute();
-    var id = route.storyId;
+    var route = parseRoute(), id = route.storyId;
     if (id && states[id]) { delete states[id]; save(); }
     if (id) go(id, DATA.stories[id].start); else showStorySelect();
-    // if hash didn't change (already at start), force a re-render
-    route = parseRoute();
-    render();
-    window.scrollTo(0, 0);
+    render(); window.scrollTo(0, 0);
   }
 
-  // ---------- top-level render ----------
   function render() {
     var route = parseRoute();
     if (!route.storyId || !DATA.stories[route.storyId]) { showStorySelect(); return; }
-    var story = DATA.stories[route.storyId];
-    var wp = route.wp || story.start;
-    showWaypoint(route.storyId, wp);
+    showWaypoint(route.storyId, route.wp || DATA.stories[route.storyId].start);
   }
 
-  // ---------- boot ----------
   function boot() {
     load();
     fetch(STORY_URL).then(function (r) {

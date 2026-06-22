@@ -2,7 +2,7 @@
  * Cache-first so the whole walk runs with no cell signal once loaded at the
  * trailhead. Bump CACHE_VERSION to push a clean update (old caches are purged).
  */
-var CACHE_VERSION = 'ftw-cache-v1';
+var CACHE_VERSION = 'ftw-cache-v2';
 
 // App shell + story data + icons. Audio/illustrations get added here as they
 // are produced (and the version bumped); until then they are runtime-cached.
