@@ -91,7 +91,7 @@
               "setFlags": { "fooled_by_wisp": true },
               "collect": "cap_cleverness",
               "audio": "crown/wp4_straight.mp3",
-              "text": "You take one step on toward it, then another — it is so warm, and you are so tired — and the instant you pass the fork the light bursts white and dies, and the dark slams down like a lid. You cannot see your own hands. Something close by laughs, low and pleased, and a voice you have not heard before, dry as old leaves, says your name. Raggeth. You stumble back. You fall. And then — a small silver gleam in all that black: the fox’s eye, if you were kind to him; the moth’s last guttering light, if you were not. It leads you back to the fork and turns you firmly onto the right-hand path. The second golden cap lies in the moss where you fell. You take it and do not look back. “Cleverness,” the moth whispers, shaken, “you’ll buy dearer next time. Now — right. Always right.”"
+              "text": "You step toward it — and the instant you pass the fork, the light gutters out and the cold rushes in, and somewhere close something laughs, low and pleased. You have left the path. You stumble in the dark — and then a small silver gleam finds you, and draws you back toward the fork."
             },
             {
               "label": "Turn right",
@@ -100,6 +100,20 @@
               "audio": "crown/wp4_right.mp3",
               "text": "You turn your back on the light and take the plain right-hand path. Behind you the wisp’s sweetness curdles — to a shriek, to a hiss, to nothing — Raggeth’s lure, starved of you. There at the fork, just along the right-hand way, the second golden cap gleams in the moss. You lift it gently. “Cleverness is the second gold,” the moth says quietly. “Those others were not foolish — only trusting. They walked straight on. You did not. Remember that.”"
             }
+          ],
+          "variantsNote": "Only render after the 'straight' choice (fooled_by_wisp=true): the rescuer is chosen by kind_to_fox, then the shared closing. The right-hand path and the pre-choice state fall to the empty default and print nothing.",
+          "variants": [
+            {
+              "when": { "allTrue": ["fooled_by_wisp", "kind_to_fox"] },
+              "audio": "crown/wp4_rescue_fox.mp3",
+              "text": "It is the fox’s silver eye, come back for you just as he promised. He noses you firmly back onto the right-hand path.\n\nThe second golden cap lies in the moss at the fork. You take it. “Cleverness is dear-bought,” the moth says quietly. “Now — go right. The right-hand path. Always right.”"
+            },
+            {
+              "when": { "allTrue": ["fooled_by_wisp"], "allFalse": ["kind_to_fox"] },
+              "audio": "crown/wp4_rescue_moth.mp3",
+              "text": "It is the moth’s last light, burning lower than ever to reach you, and it leads you back onto the right-hand path.\n\nThe second golden cap lies in the moss at the fork. You take it. “Cleverness is dear-bought,” the moth says quietly. “Now — go right. The right-hand path. Always right.”"
+            },
+            { "default": true, "text": "" }
           ],
           "next": "wp5"
         },
