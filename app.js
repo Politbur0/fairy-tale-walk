@@ -16,7 +16,8 @@
   'use strict';
 
   var STORY_URL = './data/story.json';
-  var LS_KEY = 'ftw_v1';
+  var LS_KEY = 'ftw_state';
+  var SCHEMA = 2;   // bump when the story/state shape changes -> old saves are discarded
 
   var DATA = null;
   var states = {};
@@ -27,11 +28,13 @@
   function load() {
     try {
       var saved = JSON.parse(localStorage.getItem(LS_KEY));
-      if (saved && saved.states) states = saved.states;
+      // discard progress saved against an older story/state shape
+      if (saved && saved.schema === SCHEMA && saved.states) states = saved.states;
+      else states = {};
     } catch (e) { states = {}; }
   }
   function save() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ v: 2, states: states })); } catch (e) {}
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ schema: SCHEMA, states: states })); } catch (e) {}
   }
   function freshState(storyId) {
     return { storyId: storyId, flags: {}, collected: [], applied: {}, resolved: {}, committed: {}, scene: {}, currentWp: null };
@@ -104,7 +107,8 @@
   function resolveScene(state, wp, wpId) {
     if (!wp.scenes) return wp;
     var idx = state.scene[wpId];
-    if (idx == null) { idx = pickSceneIndex(state, wp.scenes); state.scene[wpId] = idx; }
+    if (idx == null) { idx = pickSceneIndex(state, wp.scenes); if (idx >= 0) state.scene[wpId] = idx; }
+    if (idx < 0) return null;   // no scene matches yet (e.g. the road isn't set — walker is out of order)
     var sc = wp.scenes[idx] || {};
     var merged = {}, k;
     for (k in wp) if (k !== 'scenes') merged[k] = wp[k];
@@ -200,6 +204,21 @@
     app.appendChild(wrap);
   }
 
+  // A road-branched post reached before the path was chosen (out of order / stale).
+  function showNeedTrunk(storyId, wp) {
+    clear(); renderCapBar(stateFor(storyId));
+    var w = el('section', 'screen notice');
+    if (wp && wp.n) w.appendChild(el('p', 'post-no', 'Post ' + wp.n));
+    w.appendChild(el('h1', 'title', 'Not yet'));
+    w.appendChild(el('p', 'lede', 'This part of the tale changes with the path you chose earlier — and that choice hasn’t been made yet. Walk the posts in order from the start and this one will make sense when you reach it.'));
+    var b = el('button', 'btn', 'Go to the beginning');
+    b.addEventListener('click', function () { go(storyId, DATA.stories[storyId].start); });
+    w.appendChild(b);
+    w.appendChild(el('p', 'advance-sub', 'Or jump to a post number:'));
+    w.appendChild(numberEntry(storyId));
+    app.appendChild(w);
+  }
+
   function numberEntry(storyId) {
     var form = el('form', 'num-entry');
     var input = el('input', 'num-input');
@@ -224,6 +243,7 @@
     var state = stateFor(storyId);
     state.currentWp = wpId;
     var sc = resolveScene(state, base, wpId);
+    if (!sc) { showNeedTrunk(storyId, base); return; }   // road-branched post reached out of order
 
     if (!state.applied[wpId]) { applyEffects(state, sc); state.applied[wpId] = true; }
 
