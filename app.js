@@ -245,27 +245,35 @@
     var img = mediaImage(sc.image, sc.title);
     if (img) scene.appendChild(img);
 
-    // narration: text -> choice result -> seasonalIntro -> textCont -> variant -> endingVariant -> textAfter
+    // One screen = one beat. BEFORE a choice: the setup (lead-in + prompt +
+    // buttons). AFTER a choice: only the result beat — the setup is cleared so
+    // the reader's eye lands on fresh text, not a re-read from the top.
     var body = el('div', 'scene-body'), audios = [];
-    paragraphs(body, sc.text);
-    if (resolved) { paragraphs(body, resolved.text); if (resolved.audio) audios.push(resolved.audio); }
+    var showSetup = !resolved;   // a linear waypoint (no choice) also shows its setup
 
-    if (sc.seasonalIntro) {
-      var sIntro = sc.seasonalIntro.filter(function (x) { return x.when === season(); })[0] || sc.seasonalIntro[0];
-      if (sIntro) { paragraphs(body, sIntro.text); if (sIntro.audio) audios.push(sIntro.audio); }
+    if (showSetup) {
+      paragraphs(body, sc.text);
+      if (sc.audio) audios.push(sc.audio);
+      if (sc.seasonalIntro) {
+        var sIntro = sc.seasonalIntro.filter(function (x) { return x.when === season(); })[0] || sc.seasonalIntro[0];
+        if (sIntro) { paragraphs(body, sIntro.text); if (sIntro.audio) audios.push(sIntro.audio); }
+      }
+      paragraphs(body, sc.textCont);
+      if (sc.variants) {
+        var variant = pickVariant(state, sc.variants);
+        if (variant) { paragraphs(body, variant.text); if (variant.audio) audios.push(variant.audio); }
+      }
+    } else {
+      paragraphs(body, resolved.text);
+      if (resolved.audio) audios.push(resolved.audio);
     }
-    paragraphs(body, sc.textCont);
-    if (sc.variants) {
-      var variant = pickVariant(state, sc.variants);
-      if (variant) { paragraphs(body, variant.text); if (variant.audio) audios.push(variant.audio); }
-    }
+
     var pickedEnding = null;
     if (settled && sc.endingVariants) {
       pickedEnding = pickVariant(state, sc.endingVariants);
       if (pickedEnding) { paragraphs(body, pickedEnding.text); if (pickedEnding.audio) audios.push(pickedEnding.audio); }
     }
-    paragraphs(body, sc.textAfter);
-    if (sc.audio) audios.unshift(sc.audio);
+    if (settled) paragraphs(body, sc.textAfter);
     scene.appendChild(body);
     audios.forEach(function (a) { var node = mediaAudio(a); if (node) scene.appendChild(node); });
 
@@ -299,6 +307,7 @@
     if (sc.wayfinding) scene.appendChild(wayBanner(sc.wayfinding));
 
     app.appendChild(scene);
+    window.scrollTo(0, 0);   // every beat starts the reader's eye at the top
     save();
   }
 
@@ -341,9 +350,16 @@
     return again;
   }
 
+  // Relenting on a soft bad ending = taking the "go on" beat: resolve this
+  // waypoint to its first non-terminal choice so the reader turns to a fresh
+  // page (the go-on result), not back to the setup they already read.
   function commitWaypoint(storyId, wpId) {
     var st = stateFor(storyId);
-    st.committed[wpId] = true; delete st.resolved[wpId]; save();
+    var wp = resolveScene(st, DATA.stories[storyId].waypoints[wpId], wpId);
+    var idx = 0;
+    if (wp.choices) for (var i = 0; i < wp.choices.length; i++) { if (!wp.choices[i].ending) { idx = i; break; } }
+    applyEffects(st, wp.choices && wp.choices[idx]);
+    st.resolved[wpId] = idx; save();
     showWaypoint(storyId, wpId); window.scrollTo(0, 0);
   }
 
