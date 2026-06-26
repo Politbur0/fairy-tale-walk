@@ -17,7 +17,7 @@
 
   var STORY_URL = './data/story.json';
   var LS_KEY = 'ftw_state';
-  var SCHEMA = 2;   // bump when the story/state shape changes -> old saves are discarded
+  var SCHEMA = 3;   // bump when the story/state shape changes -> old saves are discarded
 
   var DATA = null;
   var states = {};
@@ -37,12 +37,13 @@
     try { localStorage.setItem(LS_KEY, JSON.stringify({ schema: SCHEMA, states: states })); } catch (e) {}
   }
   function freshState(storyId) {
-    return { storyId: storyId, flags: {}, collected: [], applied: {}, resolved: {}, committed: {}, scene: {}, currentWp: null };
+    return { storyId: storyId, flags: {}, collected: [], applied: {}, resolved: {}, committed: {}, scene: {}, attempts: {}, currentWp: null };
   }
   function stateFor(storyId) {
     if (!states[storyId]) states[storyId] = freshState(storyId);
     var s = states[storyId];
-    s.applied = s.applied || {}; s.resolved = s.resolved || {}; s.committed = s.committed || {}; s.scene = s.scene || {};
+    s.applied = s.applied || {}; s.resolved = s.resolved || {}; s.committed = s.committed || {};
+    s.scene = s.scene || {}; s.attempts = s.attempts || {};
     return s;
   }
 
@@ -258,6 +259,7 @@
 
     var head = el('div', 'scene-head');
     if (sc.n) head.appendChild(el('span', 'post-no', 'Post ' + sc.n));
+    else if (sc.tag) head.appendChild(el('span', 'post-no', sc.tag));
     head.appendChild(el('h1', 'scene-title', sc.title || ''));
     if (sc.voice && DATA.voices && DATA.voices[sc.voice]) head.appendChild(el('span', 'voice', DATA.voices[sc.voice]));
     scene.appendChild(head);
@@ -288,8 +290,11 @@
       if (resolved.audio) audios.push(resolved.audio);
     }
 
+    // A resolved choice that carries `next` ADVANCES (it's not an ending), so its
+    // endingVariants must not fire. Only an ending-bearing settle shows them.
+    var settledEnding = settled && !(resolved && resolved.next);
     var pickedEnding = null;
-    if (settled && sc.endingVariants) {
+    if (settledEnding && sc.endingVariants) {
       pickedEnding = pickVariant(state, sc.endingVariants);
       if (pickedEnding) { paragraphs(body, pickedEnding.text); if (pickedEnding.audio) audios.push(pickedEnding.audio); }
     }
@@ -309,10 +314,23 @@
       scene.appendChild(renderEnding(storyId, wpId, endInfo));
     } else if (hasChoice && !resolved) {
       if (sc.prompt) scene.appendChild(el('p', 'choice-prompt', sc.prompt));
+      var feedback = el('div', 'feedback');   // for retry flares/hints (puzzle)
+      scene.appendChild(feedback);
       var choices = el('div', 'choices');
       sc.choices.forEach(function (c, i) {
         var b = el('button', 'btn choice' + (c.danger ? ' danger' : ''), c.label);
         b.addEventListener('click', function () {
+          // a wrong/incomplete puzzle attempt: flare + (escalating) hint, never a dead end
+          if (c.retry) {
+            var n = (state.attempts[wpId] = (state.attempts[wpId] || 0) + 1);
+            var hint = c.hints ? c.hints[Math.min(n - 1, c.hints.length - 1)] : c.text;
+            var flare = el('div', 'cauldron-flare');
+            paragraphs(flare, hint);
+            feedback.appendChild(flare);
+            save();
+            flare.scrollIntoView ? flare.scrollIntoView() : window.scrollTo(0, 0);
+            return;
+          }
           applyEffects(state, c);
           state.resolved[wpId] = i; save();
           showWaypoint(storyId, wpId); window.scrollTo(0, 0);
@@ -321,7 +339,9 @@
       });
       scene.appendChild(choices);
     } else {
-      scene.appendChild(advance(story, storyId, sc));
+      var nextId = (resolved && resolved.next) || sc.next;
+      var advLabel = (resolved && resolved.advanceLabel) || sc.advanceLabel;
+      scene.appendChild(advance(story, storyId, sc, nextId, advLabel));
     }
 
     if (sc.wayfinding) scene.appendChild(wayBanner(sc.wayfinding));
@@ -383,12 +403,13 @@
     showWaypoint(storyId, wpId); window.scrollTo(0, 0);
   }
 
-  function advance(story, storyId, sc) {
+  function advance(story, storyId, sc, nextId, advLabel) {
+    nextId = nextId || sc.next;
     var box = el('div', 'advance');
-    var next = sc.next ? story.waypoints[sc.next] : null;
-    if (next && next.gateless) {
-      var on = el('button', 'btn', 'Walk on ▸');
-      on.addEventListener('click', function () { go(storyId, sc.next); window.scrollTo(0, 0); });
+    var next = nextId ? story.waypoints[nextId] : null;
+    if (next && next.gateless) {   // tap-through beat (no QR): the Road to Raggeth
+      var on = el('button', 'btn', advLabel || 'Walk on ▸');
+      on.addEventListener('click', function () { go(storyId, nextId); window.scrollTo(0, 0); });
       box.appendChild(on);
       return box;
     }

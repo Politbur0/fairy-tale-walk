@@ -170,6 +170,16 @@ body {
 }
 .num-input:focus { outline: none; border-color: var(--gold); }
 
+/* ── cauldron puzzle: flare + escalating hint ── */
+.feedback { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+.cauldron-flare {
+  border-left: 3px solid var(--danger);
+  background: rgba(232,176,75,0.08);
+  padding: 12px 16px;
+  animation: rise 0.4s ease both;
+}
+.cauldron-flare .prose { margin-bottom: 0; font-style: italic; color: var(--gold-hi); }
+
 /* ── wayfinding banner (unmissable) ── */
 .wayfinding {
   position: sticky; bottom: 0;

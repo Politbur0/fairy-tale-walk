@@ -40,22 +40,37 @@ Evaluated top-down; first entry whose `when` matches wins, else the `default` en
   Endings are leaf nodes keyed to full state (route + allies + redemption).
 
 ## What's built
-- **Hero's Road, end to end** (the trail-tested spine): Post 1 → 2 (commitment
-  gate, soft-bad bounce) → 3 (trunk split) → 4 (clever/fooled) → 5 (brave/timid) →
-  6 → 7 (pond routes: home/loop/deep) → five flag-gated endings (Crown Reborn,
-  Gentle Dawn, Quiet Healing, Pyrrhic Crown, Long Watch).
-- **Pawn's Road, drafted scaffold** (full structure, draft prose to revise):
-  Post 4 recruitment (refuse/accept the mark) → 5 redemption hinge (burn the mark /
-  fall) → 7 endings (Scarred, Hollow, Defiant Dusk; and the 🩸 Herald / Dark
-  Coronation bad endings with flee/accept bounces).
-- Collectible caps with a "2 of 3" indicator, the seasonal pond, the **Post 4
-  wayfinding banner** (holds on both roads).
-- Progress persisted to `localStorage` (screen-lock / reload safe); **Start over**
-  in the top bar. **Service worker + manifest**: installable and fully offline.
+- **Hero's Road, end to end** (v3): Post 1 → 2 (commitment gate, soft-bad bounce)
+  → 3 (trunk split: road hero/pawn) → **4, now a real 2-way PHYSICAL fork**
+  (gentle/rugged; the old wisp death-trap + wrong-turn failsafe are retired;
+  **Cleverness is earned at the fork on both arms**).
+  - **Gentle arm:** Post 5 cemetery (Courage) → 6 → pond. No fairy spring → no
+    water → a Pyrrhic finish if you go on to Raggeth.
+  - **Rugged arm (`r1`–`r5`):** Marker Tree (bold) → Bottom of the Hill (the flies,
+    pressed_on) → **Fairy Spring** (have_water + fairy_clue full/riddle/none) →
+    Tree-Face Grove (grove_blessing) → Steep Incline (Courage) → pond.
+  - **Pond (`wp7`) = the LAST QR.** Binary choice: *set the caps* (home →
+    Gentle Dawn / Long Watch) or *go end Raggeth*.
+  - **The Road to Raggeth** — gateless (no-QR) tap-through waypoints `rg_*` the
+    walker advances with a button while following red tree-arrows on foot: deep
+    wood → wildflower meadow & picnic (the "stay" temptation) → second grove →
+    lair-in-sight (stay/cut-across bounce) → hut (leave/open-hatch bounce) →
+    **the cauldron puzzle**.
+  - **Cauldron:** cast the 3 caps, then quench — **water → ★ Crown Reborn**
+    (clean; trial vs. full-clue framing; +grove beat), **no water → Pyrrhic**.
+    Wrong/incomplete attempts use `retry` choices that flare + (escalating) hint
+    and **never dead-end**.
+- **Pawn's Road:** Posts 4–5 and the pond endings (Scarred / Hollow / Defiant Dusk;
+  🩸 Herald / Dark Coronation with flee/accept bounces) are intact from v2. The
+  **rugged arm and the Raggeth finale are `[PAWN — not yet written]` stubs.**
+- Collectible caps with a "2 of 3" indicator; seasonal pond; progress persisted to
+  `localStorage` (screen-lock / reload safe); **Start over** in the top bar;
+  **service worker + manifest** (installable, fully offline).
 
-> **DRAFT PROSE.** Every new v2 scene (the Post 2 gate, all of Pawn's Road, the
-> pond routes and endings) is first-draft narration meant to be revised in
-> `story.json`. Hero's Road adapts the trail-tested v1 prose.
+> **DRAFT PROSE.** All new v3 Hero scenes (the fork, the five rugged posts, the
+> whole Road to Raggeth, the cauldron, the new endings) are first-draft narration
+> to be revised in `story.json`. The **escalating cauldron hint text is
+> placeholder** (the script left it "to write"). Pawn rugged/finale are stubs.
 
 ## Not yet built (later steps)
 - **Audio** (step 3): `text` blocks become MP3s via the ElevenLabs API using the
