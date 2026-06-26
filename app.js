@@ -15,7 +15,11 @@
 (function () {
   'use strict';
 
-  var STORY_URL = './data/story.json';
+  var STORY_VERSION = 3;                                      // must equal story.json meta.version
+  var STORY_URL = './data/story.json?v=' + STORY_VERSION;     // version-locked: this app.js can only
+                                                             // ever load its OWN matching story.json,
+                                                             // so a stale cache can't pair new code with
+                                                             // old data (the cause of weird routing).
   var LS_KEY = 'ftw_state';
   var SCHEMA = 3;   // bump when the story/state shape changes -> old saves are discarded
 
@@ -456,6 +460,11 @@
       if (!r.ok) throw new Error('story ' + r.status);
       return r.json();
     }).then(function (json) {
+      // Self-heal a stale/mismatched cache: if the data we got isn't the version
+      // this code expects, purge caches and reload once to fetch the matching build.
+      if (!json || !json.meta || json.meta.version !== STORY_VERSION) {
+        return recoverFromStale();
+      }
       DATA = json;
       window.addEventListener('hashchange', render);
       render();
@@ -467,6 +476,28 @@
       app.appendChild(w);
       console.error(err);
     });
+  }
+
+  // Stale/mismatched build recovery — guarded so it can never loop.
+  function recoverFromStale() {
+    var tried;
+    try { tried = sessionStorage.getItem('ftw_heal'); } catch (e) {}
+    if (!tried) {
+      try { sessionStorage.setItem('ftw_heal', '1'); } catch (e) {}
+      var done = function () { try { location.reload(); } catch (e) {} };
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (ks) {
+          return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+        }).then(done, done);
+      } else { done(); }
+      return;
+    }
+    // Already purged + reloaded once and still mismatched — show an actionable note.
+    app.innerHTML = '';
+    var w = el('section', 'screen notice');
+    w.appendChild(el('h1', 'title', 'Please reopen'));
+    w.appendChild(el('p', 'lede', 'The walk just updated. Close every tab and window for this site (or fully quit and reopen the app), then open it again to load the new version.'));
+    app.appendChild(w);
   }
 
   boot();
