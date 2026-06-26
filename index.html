@@ -33,8 +33,35 @@
   <script src="./app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
+      // If a SW already controls this page, a later controllerchange means a NEW
+      // SW has taken over (a fresh deploy) — reload once so the new content shows.
+      // Guarded so the very first install (no prior controller) doesn't reload.
+      var hadController = !!navigator.serviceWorker.controller;
+      var reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (reloading || !hadController) return;
+        reloading = true;
+        window.location.reload();
+      });
+
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function (e) {
+        navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (reg) {
+          // proactively check for a new SW on each load (and when the tab refocuses)
+          reg.update();
+          document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'visible') reg.update();
+          });
+          // if an update is found, let the waiting worker take over immediately
+          reg.addEventListener('updatefound', function () {
+            var sw = reg.installing;
+            if (!sw) return;
+            sw.addEventListener('statechange', function () {
+              if (sw.state === 'installed' && navigator.serviceWorker.controller) {
+                sw.postMessage && sw.postMessage('SKIP_WAITING');
+              }
+            });
+          });
+        }).catch(function (e) {
           console.warn('SW registration failed', e);
         });
       });
