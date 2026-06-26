@@ -223,14 +223,15 @@
   function numberEntry(storyId) {
     var form = el('form', 'num-entry');
     var input = el('input', 'num-input');
-    input.type = 'number'; input.min = '1'; input.inputMode = 'numeric';
-    input.placeholder = 'Post #'; input.setAttribute('aria-label', 'Enter post number');
+    input.type = 'text'; input.inputMode = 'text'; input.autocapitalize = 'characters'; input.autocomplete = 'off';
+    input.placeholder = 'Post code'; input.setAttribute('aria-label', 'Enter the post code shown on the sign');
     var btn = el('button', 'btn small', 'Go'); btn.type = 'submit';
     form.appendChild(input); form.appendChild(btn);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var v = (input.value || '').trim();
-      if (/^\d+$/.test(v)) go(storyId, 'wp' + v);
+      var v = (input.value || '').trim().toUpperCase(), m;
+      if (/^\d+$/.test(v)) go(storyId, 'wp' + v);                       // shared / gentle posts: 1..7
+      else if ((m = v.match(/^R\s*0*(\d+)$/))) go(storyId, 'r' + m[1]); // rugged posts: R1..R5
     });
     return form;
   }
@@ -341,7 +342,8 @@
     } else {
       var nextId = (resolved && resolved.next) || sc.next;
       var advLabel = (resolved && resolved.advanceLabel) || sc.advanceLabel;
-      scene.appendChild(advance(story, storyId, sc, nextId, advLabel));
+      var advPrompt = (resolved && resolved.advancePrompt) || sc.advancePrompt;
+      scene.appendChild(advance(story, storyId, sc, nextId, advLabel, advPrompt));
     }
 
     if (sc.wayfinding) scene.appendChild(wayBanner(sc.wayfinding));
@@ -403,7 +405,7 @@
     showWaypoint(storyId, wpId); window.scrollTo(0, 0);
   }
 
-  function advance(story, storyId, sc, nextId, advLabel) {
+  function advance(story, storyId, sc, nextId, advLabel, advPrompt) {
     nextId = nextId || sc.next;
     var box = el('div', 'advance');
     var next = nextId ? story.waypoints[nextId] : null;
@@ -414,9 +416,15 @@
       return box;
     }
     if (next) {
-      var label = next.n ? ('Post ' + next.n) : 'the next post';
-      box.appendChild(el('p', 'advance-hint', 'Now find ' + label + ' on the trail and scan its code to continue.'));
-      box.appendChild(el('p', 'advance-sub', 'Camera won’t focus? Enter the post number:'));
+      // path-relative prompt when supplied (the fork + rugged arm); else fall back
+      // to the post number for the shared / gentle spine.
+      var hint = advPrompt;
+      if (!hint) {
+        var label = next.n ? ('Post ' + next.n) : 'the next post';
+        hint = 'Now find ' + label + ' on the trail and scan its code to continue.';
+      }
+      box.appendChild(el('p', 'advance-hint', hint));
+      box.appendChild(el('p', 'advance-sub', 'Camera won’t focus? Enter the post’s code (shown on the sign):'));
       box.appendChild(numberEntry(storyId));
     }
     return box;

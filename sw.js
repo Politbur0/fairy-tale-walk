@@ -15,7 +15,7 @@
  *
  * Still bump CACHE_VERSION when you want to force-purge old caches on activate.
  */
-var CACHE_VERSION = 'ftw-cache-v5';
+var CACHE_VERSION = 'ftw-cache-v6';
 
 var PRECACHE = [
   './',

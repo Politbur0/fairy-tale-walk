@@ -121,24 +121,26 @@
             {
               "when": { "equals": { "road": "hero" } },
               "voice": "moth",
-              "text": "The path forks at a leaning, half-rotted post — and this time there is no lying light, no lure, no trick. Just two honest ways to the same far pond. To your right the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two by a long mile.\n\n“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs and quicker to the king. The straight way drops into the low ground — steeper, longer, thick with his biting flies; but the king’s oldest friends keep to it, and there are gifts on it found nowhere else. Few choose the hard road now.” It steadies. “This once, the wood does not test you with a lie. It only asks you to choose, knowing what each road is. Choose with your eyes open, traveler — that clear seeing is its own gold, and you have earned it.”",
+              "text": "The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.\n\n“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, longer, thick with his biting flies. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”",
               "prompt": "Which way do you take — the gentle right, or the rugged straight?",
               "choices": [
                 {
-                  "label": "Bear right — the gentle path",
+                  "label": "Take the gentle path (right)",
                   "setFlags": { "path": "gentle" },
                   "collect": "cap_cleverness",
                   "next": "wp5",
+                  "advancePrompt": "Take the right-hand trail and find the next post to continue.",
                   "audio": "crown/wp4_gentle.mp3",
-                  "text": "You take the easy right-hand way, and the ground stays kind beneath your feet, winding level through the trees. “Wisely weighed,” the moth says. “There is no shame in the gentler road — only know it keeps to the high ground, and the things that live in the low places, it never meets. You chose, and you knew what you chose: that understanding is the second gold.” It settles in you, cool and certain, like a coin pressed into the palm."
+                  "text": "You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it."
                 },
                 {
-                  "label": "Go straight on — the rugged path",
+                  "label": "Take the rugged path (straight ahead)",
                   "setFlags": { "path": "rugged" },
                   "collect": "cap_cleverness",
                   "next": "r1",
+                  "advancePrompt": "Take the steep path straight ahead and find the first post on the rugged road.",
                   "audio": "crown/wp4_rugged.mp3",
-                  "text": "You set your face to the steeper, stonier way, the one that drops into the dark hollow. “The hard road,” the moth says, and there is real respect in it. “Few choose it; fewer still with open eyes. That seeing — choosing the harder true thing over the easy one — that is the second gold, and you have it now.” Then, lower: “Come. Mind your feet. It falls away just ahead, and his flies will find us in the low ground.”"
+                  "text": "You choose the hard road — straight on, down into the stony hollow, the longer and steeper way — and you choose it knowing exactly what it costs, for the gifts the king’s old friends keep there. “Clear-eyed, and bold with it,” the moth says, half a laugh and half a worry. “That is the second gold — and you’ll have need of the rest before this road is done.” The Cap of Cleverness settles warm in your pocket. The trail pitches down before you into the dark."
                 }
               ]
             },
@@ -243,7 +245,7 @@
         },
 
         "r1": {
-          "tag": "The Rugged Road · 1",
+          "tag": "The Rugged Road · R1",
           "title": "The Marker Tree",
           "image": "crown/r1.jpg",
           "scenes": [
@@ -256,6 +258,7 @@
                 { "label": "Stride on boldly", "setFlags": { "bold": true }, "audio": "crown/r1_bold.mp3", "text": "You set your jaw and go, swatting as you descend; the flies scatter and regroup, but you’ve shown them you won’t be turned. The moth’s light steadies." },
                 { "label": "Pick your way careful", "setFlags": { "bold": false }, "audio": "crown/r1_careful.mp3", "text": "You go slow and sure down the dropping path, watching your feet on the roots and stones. The flies pester, but you keep your footing and your patience." }
               ],
+              "advancePrompt": "Continue down the rugged trail and find the next post on the rugged road.",
               "next": "r2"
             },
             { "when": { "equals": { "road": "pawn" } }, "voice": "narrator", "text": "[PAWN — not yet written. The Pawn’s Road version of the rugged arm (the marked / defiant walker on the stony path) is still to be drafted. Placeholder so the trail does not dead-end.]", "next": "r2" }
@@ -263,7 +266,7 @@
         },
 
         "r2": {
-          "tag": "The Rugged Road · 2",
+          "tag": "The Rugged Road · R2",
           "title": "The Bottom of the Hill",
           "image": "crown/r2.jpg",
           "scenes": [
@@ -277,6 +280,7 @@
                 { "label": "Cover up and push slow", "setFlags": { "pressed_on": true }, "audio": "crown/r2_slow.mp3", "text": "You shield your face and walk steady through without panic, bearing right and up until they fall away. “Steady,” the moth says. “That’s its own kind of brave.”" },
                 { "label": "Falter — nearly turn back", "setFlags": { "pressed_on": false }, "audio": "crown/r2_falter.mp3", "text": "For a moment the biting is too much and you turn to flee up the hill — then catch yourself, grit your teeth, and force onward, shaken. The flies got their hooks in your nerve a little. You go on anyway." }
               ],
+              "advancePrompt": "Continue along the rugged trail and find the next post on the rugged road.",
               "next": "r3"
             },
             { "when": { "equals": { "road": "pawn" } }, "voice": "narrator", "text": "[PAWN — not yet written. Rugged arm, Post 2. Placeholder so the trail does not dead-end.]", "next": "r3" }
@@ -284,7 +288,7 @@
         },
 
         "r3": {
-          "tag": "The Rugged Road · 3",
+          "tag": "The Rugged Road · R3",
           "title": "The Fairy Spring",
           "image": "crown/r3.jpg",
           "scenes": [
@@ -298,6 +302,7 @@
                 { "label": "Cup your hands, drink, then fill quietly", "setFlags": { "have_water": true, "fairy_clue": "riddle" }, "audio": "crown/r3_drink.mp3", "text": "You drink first — so cold it aches, so clean it steadies you — then fill your flask. The fairy creaks softly, neither pleased nor cross. “Thirsty thing. You’ll need it more than you know before the night’s done. Mind you don’t waste it.” You have her water, but only a riddle, not the answer." },
                 { "label": "Just fill your flask and hurry on", "setFlags": { "have_water": true, "fairy_clue": "none" }, "audio": "crown/r3_hurry.mp3", "text": "You fill quickly and turn back to the path, the errand pressing on you. The pine’s creak falls silent behind you — you didn’t stop to listen. You carry the water without knowing what it’s for." }
               ],
+              "advancePrompt": "Stay on the rugged trail and find the next post on the rugged road.",
               "next": "r4"
             },
             { "when": { "equals": { "road": "pawn" } }, "voice": "narrator", "text": "[PAWN — not yet written. Rugged arm, the Fairy Spring. The marked walker treats the fairy differently; to be drafted. Placeholder so the trail does not dead-end.]", "next": "r4" }
@@ -305,7 +310,7 @@
         },
 
         "r4": {
-          "tag": "The Rugged Road · 4",
+          "tag": "The Rugged Road · R4",
           "title": "The Tree-Face Grove",
           "image": "crown/r4.jpg",
           "scenes": [
@@ -319,6 +324,7 @@
                 { "label": "Bow to them", "setFlags": { "grove_blessing": true }, "audio": "crown/r4_bow.mp3", "text": "You bow your head to the watching faces, in respect for what they’ve guarded so long. The murmur is gentler, almost grateful. “Courteous, and kind. Go with our strength.”" },
                 { "label": "Hurry quietly past", "setFlags": { "grove_blessing": false }, "audio": "crown/r4_hurry.mp3", "text": "The crowd of waking faces is too much; you drop your eyes and walk through quick and quiet. They watch you go and say nothing. You feel them at your back a long while. No blessing, and no harm." }
               ],
+              "advancePrompt": "Continue on the rugged trail and find the last post before the pond.",
               "next": "r5"
             },
             { "when": { "equals": { "road": "pawn" } }, "voice": "narrator", "text": "[PAWN — not yet written. Rugged arm, the Tree-Face Grove. The grove judges the marked walker differently; to be drafted. Placeholder so the trail does not dead-end.]", "next": "r5" }
@@ -326,7 +332,7 @@
         },
 
         "r5": {
-          "tag": "The Rugged Road · 5",
+          "tag": "The Rugged Road · R5",
           "title": "The Steep Incline",
           "image": "crown/r5.jpg",
           "collectLabel": "Cap of Courage",
@@ -341,6 +347,7 @@
                 { "label": "Rest, then climb", "setFlags": { "brave": true }, "collect": "cap_courage", "audio": "crown/r5_rest.mp3", "text": "You catch your breath, steady your heart — then climb, slow and stubborn, all the way up without turning back. “Not the fastest,” says the moth, “but you did not quit. That is the gold.”" },
                 { "label": "Nearly turn back, then climb anyway", "setFlags": { "brave": true, "faltered": true }, "collect": "cap_courage", "audio": "crown/r5_falter.mp3", "text": "Halfway up, the climb and the long night nearly beat you, and you almost turn for home — but you don’t. You crawl the last of it on will alone and stand, shaking, at the top. You know exactly what this gold cost." }
               ],
+              "advancePrompt": "Climb the last of the hill to the pond — the final post on the trail — and scan it there.",
               "next": "wp7"
             },
             { "when": { "equals": { "road": "pawn" } }, "voice": "narrator", "collect": "cap_courage", "text": "[PAWN — not yet written. Rugged arm, the Steep Incline (Cap of Courage). Placeholder so the trail does not dead-end.]", "next": "wp7" }
