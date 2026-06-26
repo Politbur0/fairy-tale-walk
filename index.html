@@ -44,21 +44,26 @@
         window.location.reload();
       });
 
+      function activate(sw) { if (sw && sw.postMessage) sw.postMessage('SKIP_WAITING'); }
+
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (reg) {
+          // A new SW already installed-and-waiting from a prior visit must be told
+          // to take over NOW (otherwise it sits serving stale content until every
+          // tab closes). This is the gap that let old builds linger.
+          if (reg.waiting && navigator.serviceWorker.controller) activate(reg.waiting);
+
           // proactively check for a new SW on each load (and when the tab refocuses)
           reg.update();
           document.addEventListener('visibilitychange', function () {
             if (document.visibilityState === 'visible') reg.update();
           });
-          // if an update is found, let the waiting worker take over immediately
+          // when an update is found, activate it as soon as it finishes installing
           reg.addEventListener('updatefound', function () {
             var sw = reg.installing;
             if (!sw) return;
             sw.addEventListener('statechange', function () {
-              if (sw.state === 'installed' && navigator.serviceWorker.controller) {
-                sw.postMessage && sw.postMessage('SKIP_WAITING');
-              }
+              if (sw.state === 'installed' && navigator.serviceWorker.controller) activate(sw);
             });
           });
         }).catch(function (e) {
