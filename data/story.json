@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 6,
-    "note": "Story is DATA. v5 = cake choice DECOUPLED from the Hero/Pawn road (master blueprint Q5). Post 3 cake sets fox alive (fox_ally) or dead + `marked` (the first dark mark) — it does NOT set road. The Post 4 fork (gentle/rugged) is the real split, open to everyone, and BOTH choices set road=hero (provisional). RUGGED arm = always Hero; fox_ally picks the fox-alive vs fox-dead rugged scenes, so a cake-keeper who goes rugged now reaches the fox-DEAD scenes and the counting finale as a Hero. PAWN identity is sealed only on the GENTLE path: the cemetery (wp5) gates on `marked` — unmarked = normal Hero cemetery; marked = redemption hinge (light candle -> redeemed Hero; refuse -> fallen + road=pawn = sealed Pawn). The pond gates on road: hero -> counting/home finale; pawn -> sealed-pawn serve/enslaved STUB (finale still to be written). Retired the old cake=Hero/Pawn hard split, the Post 4 Raggeth recruitment, and the marked_dark/defiant flags. Counting finale (5 benches from after the pond / 4 tables / 7 faces; retry=flare+hint+fumbled, never dead-ends; has_number AND !fumbled -> Crown Reborn else Pyrrhic) is unchanged from v4. Render order: text->choice result->seasonalIntro->textCont->variant->endingVariant->textAfter."
+    "version": 7,
+    "note": "Story is DATA. v7 = COMPLETE. Both roads written end to end. Cake (Post 3) is decoupled from road: give->fox_ally; keep->marked (the cold thing you did, not Raggeth's curse). Post 4 fork open to all, both arms set road=hero (provisional). Rugged=always Hero (fox_ally picks fox-alive/dead scenes). Pawn is sealed only on the GENTLE path: cemetery (wp5) gates on `marked` — unmarked=Hero cemetery; marked=redemption hinge: light candle->redeemed+Cap of Courage (road stays hero, rejoins Hero with 3 caps); leave dark->fallen+road=pawn, NO courage cap (pawn carries 2 caps: kindness+cleverness). wp6 and the Road to Raggeth (rg_*) and the pond gate on road: HERO->counting finale (5 benches from after the pond / 4 tables / 7 faces; retry=flare+escalating 2-per-number hints, never dead-ends; has_number AND !fumbled -> Crown Reborn else Pyrrhic); PAWN-> no counting, Raggeth flatters, faces turn away -> rg_enslave (bargain->rot->'never brought courage'; exit accept[THE END enslaved] or flee[bleak survival home]). Pawn pond also offers ABANDON -> The Cold Walk Home (THE END, bleak, safe). Hero home endings gate on fox_ally (fox-dead = solitary). Render order: text->choice result->seasonalIntro->textCont->variant->endingVariant->textAfter."
   },
   "config": {
     "dryMonths": [
@@ -229,8 +229,8 @@
                 ]
               },
               "voice": "knight",
-              "text": "The trees give way to a small graveyard — the king’s old knights, who stood against Raggeth an age ago and fell, and were never avenged. The rot creeps among the stones. And the dead feel you the moment you step in — not the gold you carry, but the cold you carry: the small cruelty of the fox left to die on the road behind you, the first dark thing the wood has felt in you.\n\nThe great cracked stone splits, and the captain rises, two coals for eyes, and looks at that coldness with something worse than anger — recognition. “We died to keep the dark out of this wood,” it says, “and here it walks in, wearing a child’s face, carrying the king’s own gold.” It lifts the cold dead candle from the stone and holds it out. “This is the cure, and it is cruel. Light it, and face what you did on the road — it will burn like a little dying, but you will come back yourself. Or turn from us and keep the cold, and carry it on to the pond — and we will not stop you, for you will already be his.”",
-              "prompt": "Light the candle and face what you did, or turn from the dead?",
+              "text": "The trees give way to the small graveyard, a dozen leaning stones in the grey light — the king’s old knights, who died resisting Raggeth an age ago, and were never avenged. But they do not stir for you the way they stir for other travelers. They are looking at you. They see something on you: the cold thing you did beneath the old tree, when a starving friend asked for bread and you closed your hand. The fox’s death clings to you like a smell, and the dead can smell it.\n\nThe great stone splits, and the captain rises — vast, oak and toadstool, an age of grief in his ruined face — and he weighs you a long, cold moment. “Raggeth’s rot does not always come from outside, child,” he says, in a voice like a closing tomb. “Sometimes it begins as one small cold thing a heart does, and lets grow. You carry such a thing now. I can see it on you.” He turns to the cold candle at his feet. “Light it — face what you did, and choose to be better — and it will burn away. It will hurt; there is nothing harder than looking straight at the worst of yourself. But you will walk on clean. Or leave it dark, and keep your small cold thing, and we will both know what you are becoming.”",
+              "prompt": "Light the candle, or leave it dark?",
               "choices": [
                 {
                   "label": "Light the candle — face what you did",
@@ -239,17 +239,16 @@
                     "brave": true
                   },
                   "collect": "cap_courage",
-                  "text": "You touch the flame to the wick, and it catches — and the cold in you catches with it, and burns. It is a little death: you go down on the cold ground, and you come back up scarred, and shaking, and yourself again. The Cap of Courage is in your hand. “Courage,” the captain says, quieter now, “is bought with fear — and sometimes with worse. You let something die on the road, and you came back to mourn it. Few do. Go on — a Hero still, though a marked one.”"
+                  "text": "Your hands shake — not at the dead now, but at the harder thing: looking straight at the fox you left to die, and not turning away. You breathe on the wick. It catches. And it does hurt — a small, clean burning, the cold thing in you guttering out — and when it’s done you are lighter, and emptied, and yourself again. The captain bows. “Courage is not only facing the dark out there,” he says. “It is facing the dark in here. That is the last gold, and the hardest won. Go on — mend his crown. And carry the fox with you now: not as a weight, but as a promise.” The Cap of Courage is warm in your hand. You walk on a Hero — scarred, and clean."
                 },
                 {
-                  "label": "Turn from the dead and keep the cold",
+                  "label": "Leave it dark — keep the cold",
                   "danger": true,
                   "setFlags": {
                     "fallen": true,
                     "road": "pawn"
                   },
-                  "collect": "cap_courage",
-                  "text": "You close your hand over the cold in your chest and back away from the candle and its cruel little fire. “Then carry it,” the captain says, and there is no anger left, only a vast tiredness. The third cap it sets on the nearest stone; you take it, because some part of you still counts to three. The dead sink down and do not watch you go. The cold has the whole of you now, and the road ahead looks like something owed to you. You climb toward the pond — and toward the one whose road you have chosen without ever being asked."
+                  "text": "You look at the cold candle, and the dead, and the long hard road of being good — and you do not light it. Why freeze and starve for a dying king and a dead fox? Let the wood rot. You’ll see to yourself. You turn from the candle and the dead — and a small voice you have not heard before, dry as old leaves and warm as a friend, speaks for the first time, pleased. “There now,” says Raggeth. “Don’t waste your light on the dead — they wasted theirs. Come to me, clever one, and you’ll never starve, never freeze, never lose again.” The dead sink back into their stones and do not try to stop you. Somehow that is the worst of it. You walk on — his, now, though you tell yourself you are only your own."
                 }
               ],
               "next": "wp6"
@@ -259,11 +258,29 @@
         "wp6": {
           "n": 6,
           "title": "The Way to the Pond",
-          "voice": "narrator",
-          "audio": "crown/wp6.mp3",
           "image": "crown/wp6.jpg",
-          "text": "Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.\n\n“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.",
-          "next": "wp7"
+          "scenes": [
+            {
+              "when": {
+                "equals": {
+                  "road": "hero"
+                }
+              },
+              "voice": "narrator",
+              "text": "Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.\n\n“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.",
+              "next": "wp7"
+            },
+            {
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "narrator",
+              "text": "The way to the pond is easy now, and that’s the horror of it. The rot doesn’t touch you; the cold lets you pass; Raggeth’s voice keeps you warm company, naming all the ways the king failed you and all the ways he’ll reward you. You walk untroubled through a dying wood while it dies around you, and you tell yourself that’s wisdom, and not the first lie you’ve told yourself tonight.",
+              "next": "wp7"
+            }
+          ]
         },
         "r1": {
           "tag": "The Rugged Road · R1",
@@ -798,7 +815,7 @@
                     "tone": "good",
                     "note": "✦ The Long Watch"
                   },
-                  "text": "One by one you press the golden caps home, and light runs through the crown and steadies the king — but you flinched, once, when it counted, and the ending is a quieter one. The king lives; the wood will live. No retinue comes to walk you out — and no fox either, for you left him cold on the road a long night ago. Only the moth lights you to the road’s edge, faithful to the last, and then even that is gone. “You saved my forest,” the king says, gentler than a bell. “Go home — and be braver, and kinder, next time. There is always a next time, in a wood.” You walk out alone into the grey, and you know the shape of every choice that brought you here. Your story is complete."
+                  "text": "One by one you press the golden caps home, and light runs through the crown and steadies the king — and you saved him, though you flinched when it counted, and you walk the long way home by yourself through a wood slowly coming back to life. No companion at your side — only the memory of one, and the vow you made at the graves to be better than the worst night of your life. It is a lonely walk. It is also, you understand, the beginning of a better road. Your story is complete."
                 },
                 {
                   "when": {
@@ -827,7 +844,7 @@
                     "tone": "good",
                     "note": "✦ The Gentle Dawn"
                   },
-                  "text": "One by one you press the golden caps home into the bare ring of the king’s crown — and light runs through it like dawn through water, and does not stop. It pours from the crown into the king, into the roots, out through the whole black wood; the rot draws back into the earth, and all around the pond the dying simply stops. The heart-well clears and rises. King Bolete stands — tall, and shining, and saved — and looks a long, kind moment at you, and at the scar where the dark had almost taken root. “You carried my crown out of the dark,” he says, “and you carried yourself back out of it too, which is the harder road. Go home in honor.” And you do go home — but you go alone. No fox runs at your heel; you left him cold in the leaves a whole night ago and a whole life ago, and no waking forest gives the dead back. The face-trees open their eyes as you pass and watch you go, gravely, and you cannot quite meet them. You saved the king. You saved the forest. You turned back from the dark when it had its hand on you — and you walk home alone, and you know exactly why. Your story is complete.\n\nFar off in the deep wood a thin green smoke still rises — Raggeth, unbeaten, biding. But that is a tale for another day. Tonight you won — and you paid for it."
+                  "text": "One by one you press the golden caps home into the bare ring of the king’s crown, and light runs through it like dawn through water, and does not stop; the rot draws back, and all around the pond the dying simply stops, and King Bolete stands tall and shining and saved. “Go home in honor,” he says, his voice a bell. And you walk home alone — no fox at your heel; you saw to that, under the old tree, and you have made your peace with it the hard way. But the king is saved, the crown is mended, and the wood is greening behind you. You carry the fox with you now, not as a weight but as a promise kept late. The dawn is yours, and quieter than it might have been — and you have earned the quiet. Your story is complete."
                 },
                 {
                   "when": {
@@ -856,17 +873,25 @@
             {
               "default": true,
               "voice": "king",
-              "textCont": "On a toadstool throne at the water’s edge sits King Bolete — grey to the bone, cracked like old wood — and his failing eyes find the cold you carried past the dead and never burned away. “Ah,” he breathes, and closes them. “So that is how it is.”\n\n[PAWN’S ROAD — the sealed-pawn finale (serve / enslaved) is not yet written. This placeholder ends the walk cleanly so the road never dead-ends.]",
-              "ending": {
-                "tone": "bad",
-                "note": "🩸 The Pawn’s Road — finale to be written",
-                "exits": [
-                  {
-                    "label": "The wood grants one last mercy — flee",
-                    "reveal": "You turn from the throne and carry the cold caps back out of the wood, and the dark closes behind you. The true ending of the Pawn’s Road — to serve, and be kept — is still to be written. For now, you walk out, and the wood waits."
+              "textCont": "The pond, and the king on his throne, grey and cracked and nearly gone. He opens one dim eye, and looks at you — and at the gold in your hands — and he sees exactly what you are. He does not plead. “So. The dark has you.” His voice is no louder than a breath. “I’ll not beg; a king does not, and begging never turned a heart already turned. But someone should tell you true, at the end: the gold you carry could still mend my crown and save this wood. It is not too late for the wood.” A pause. “It is only, perhaps, too late for you. Do as you will. You always meant to.”",
+              "prompt": "What do you do?",
+              "choices": [
+                {
+                  "label": "Carry the gold to Raggeth — strike your bargain",
+                  "danger": true,
+                  "next": "rg_road",
+                  "advanceLabel": "Into the deep wood ▸",
+                  "text": "You close your hand around the caps. Let the king die; Raggeth holds the power in this wood, and you mean to stand on the winning side of it. The king says nothing as you turn toward the deep wood. Raggeth’s voice is warm as a hearth. “Good. Oh, good. Come — bring your gift. You’ll be rewarded as he never rewarded you.”"
+                },
+                {
+                  "label": "Take what you have and go home — leave them all to it",
+                  "text": "You’ll serve no one, dark or light. You’ll just go. You pocket the gold, turn your back on the dying king and the waiting dark both, and walk out the way you came.\n\nBehind you the forest goes quiet, and quieter, and the last of the king’s light winks out somewhere in the trees. You reach the trailhead as the rot reaches the wood’s edge. You’re fine. You’re exactly as fine as you were, and not one bit more. And in the years after, when you think of the wood at all, you’ll remember a dying king who would not beg, and a fox you let go cold under an old tree — and you’ll wonder, only sometimes, only late, what the other road might have made of you.",
+                  "ending": {
+                    "tone": "bad",
+                    "note": "❄ The Cold Walk Home"
                   }
-                ]
-              }
+                }
+              ]
             }
           ]
         },
@@ -874,113 +899,254 @@
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "Into the Deep Wood",
-          "voice": "narrator",
-          "text": "You cross from the pond and the red markers take you down into the deep wood — darker here than anywhere, no moth, no king, no fox, only you and the red arrows nailed to the black trees, one and then the next. The dark does not last. The trees thin, the ground rises in a long gentle climb, and the path carries you up, out of the gloom, toward a growing light ahead.",
-          "variants": [
+          "scenes": [
             {
               "when": {
-                "allTrue": [
-                  "grove_watch"
-                ]
+                "equals": {
+                  "road": "hero"
+                }
               },
-              "text": "And the dark keeps its distance as you go — the grove’s watching cousins lining the way, holding it back from your heels."
+              "voice": "narrator",
+              "text": "You cross from the pond and the red markers take you down into the deep wood — darker here than anywhere, no moth, no king, no fox, only you and the red arrows nailed to the black trees, one and then the next. The dark does not last. The trees thin, the ground rises in a long gentle climb, and the path carries you up, out of the gloom, toward a growing light ahead.",
+              "variants": [
+                {
+                  "when": {
+                    "allTrue": [
+                      "grove_watch"
+                    ]
+                  },
+                  "text": "And the dark keeps its distance as you go — the grove’s watching cousins lining the way, holding it back from your heels."
+                }
+              ],
+              "next": "rg_meadow"
+            },
+            {
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "raggeth",
+              "text": "The same red markers take you down into the deep wood — but it means something else for you now. You’re not solving anything; you’re going home, as Raggeth has taught you to think of it. His voice keeps you warm company in the dark, naming all the ways the king failed you, and all the ways he will not.",
+              "next": "rg_meadow"
             }
-          ],
-          "next": "rg_meadow"
+          ]
         },
         "rg_meadow": {
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "The Wildflower Meadow",
-          "voice": "raggeth",
-          "text": "You come out into sudden light: a wide wildflower meadow, warm and gold and humming with bees, lovely past belief so near the dark one’s house. And Raggeth’s voice drifts sweet across it: “There now. Rest. You’ve come so far. The king has waited this long; he can wait a while more.” Benches sit among the flowers, set just so, inviting.\n\n[Count the resting-benches as you go — and remember, only those from the pond onward, never the pond’s own.]",
-          "next": "rg_picnic"
+          "scenes": [
+            {
+              "when": {
+                "equals": {
+                  "road": "hero"
+                }
+              },
+              "voice": "raggeth",
+              "text": "You come out into sudden light: a wide wildflower meadow, warm and gold and humming with bees, lovely past belief so near the dark one’s house. And Raggeth’s voice drifts sweet across it: “There now. Rest. You’ve come so far. The king has waited this long; he can wait a while more.” Benches sit among the flowers, set just so, inviting.\n\n[Count the resting-benches as you go — and remember, only those from the pond onward, never the pond’s own.]",
+              "next": "rg_picnic"
+            },
+            {
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "raggeth",
+              "text": "The trees thin and you come out into the wide wildflower meadow, warm and gold — and its warmth wraps you like approval now, not a trap; laid on, you tell yourself, for you. “There now,” Raggeth murmurs, fond. “You’ve chosen well. Rest, if you like. You’ve earned it.”",
+              "next": "rg_picnic"
+            }
+          ]
         },
         "rg_picnic": {
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "The Picnic Place",
-          "voice": "raggeth",
-          "text": "The path leads on to a quiet picnic place, tables in the warm gold light, and the pull to stop is strong — the wood’s craftiest trick, not to scare you back but to keep you.\n\n[Count the feast-tables here in the meadow.]",
-          "prompt": "Rest a moment, then rise — or march straight through?",
-          "choices": [
+          "scenes": [
             {
-              "label": "Rest a moment, then walk on",
-              "setFlags": {
-                "wise": true
+              "when": {
+                "equals": {
+                  "road": "hero"
+                }
               },
-              "text": "You sit, you breathe, you let your legs recover — and then you stand and go, because no meadow will make you forget the grey king and the dying wood. Resting was wise; rising was braver."
+              "voice": "raggeth",
+              "text": "The path leads on to a quiet picnic place, tables in the warm gold light, and the pull to stop is strong — the wood’s craftiest trick, not to scare you back but to keep you.\n\n[Count the feast-tables here in the meadow.]",
+              "prompt": "Rest a moment, then rise — or march straight through?",
+              "choices": [
+                {
+                  "label": "Rest a moment, then walk on",
+                  "setFlags": {
+                    "wise": true
+                  },
+                  "text": "You sit, you breathe, you let your legs recover — and then you stand and go, because no meadow will make you forget the grey king and the dying wood. Resting was wise; rising was braver."
+                },
+                {
+                  "label": "March straight through",
+                  "setFlags": {
+                    "hardened": true
+                  },
+                  "text": "You don’t trust the warmth for a heartbeat; you keep your eyes on the red arrows and go — counting the tables as you pass, careful not to lose the number in your hurry."
+                }
+              ],
+              "next": "rg_faces"
             },
             {
-              "label": "March straight through",
-              "setFlags": {
-                "hardened": true
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
               },
-              "text": "You don’t trust the warmth for a heartbeat; you keep your eyes on the red arrows and go — counting the tables as you pass, careful not to lose the number in your hurry."
+              "voice": "raggeth",
+              "text": "The path leads on to the quiet picnic place, tables in the gold light. You sit if you please and rise when you please; nothing here is testing you, you tell yourself. Why would it? You’re going home.",
+              "next": "rg_faces"
             }
-          ],
-          "next": "rg_faces"
+          ]
         },
         "rg_faces": {
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "The Fallen-Tree Faces",
-          "voice": "narrator",
-          "text": "The light dies behind you, the trees close in, and the trail comes to a great fallen tree it cuts straight through — and here the carved faces crowd thickest, watching from every trunk around the gap.\n\n[Count the watching faces here at the fallen tree.]",
-          "variants": [
+          "scenes": [
             {
               "when": {
-                "allTrue": [
-                  "has_number"
-                ]
+                "equals": {
+                  "road": "hero"
+                }
               },
-              "text": "And you understand, now, what the fairy meant — count them, and you will find she gave you the truth."
+              "voice": "narrator",
+              "text": "The light dies behind you, the trees close in, and the trail comes to a great fallen tree it cuts straight through — and here the carved faces crowd thickest, watching from every trunk around the gap.\n\n[Count the watching faces here at the fallen tree.]",
+              "variants": [
+                {
+                  "when": {
+                    "allTrue": [
+                      "has_number"
+                    ]
+                  },
+                  "text": "And you understand, now, what the fairy meant — count them, and you will find she gave you the truth."
+                }
+              ],
+              "next": "rg_lair"
+            },
+            {
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "narrator",
+              "text": "The light dies and the trail cuts through the great fallen tree — and here the carved faces crowd thick, and as you pass, every one of them turns away from you, every carved eye closing as you come. You tell yourself you don’t care. Mostly you believe it.",
+              "next": "rg_lair"
             }
-          ],
-          "next": "rg_lair"
+          ]
         },
         "rg_lair": {
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "The Lair in Sight",
-          "voice": "raggeth",
-          "text": "Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. The path bends the long way round, and the cold voice wheedles: “Why walk so far? The hut is just there. Cut across; save your legs. Come straight to me.” But you remember the bones — and you remember you cannot know the wood’s numbers without walking its whole road.",
-          "prompt": "Stay on the markers, or cut across?",
-          "choices": [
+          "scenes": [
             {
-              "label": "Stay on the red markers",
-              "text": "You keep the path, down and around, and Raggeth’s voice sours from coaxing to a hiss as he sees you won’t be tricked."
+              "when": {
+                "equals": {
+                  "road": "hero"
+                }
+              },
+              "voice": "raggeth",
+              "text": "Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. The path bends the long way round, and the cold voice wheedles: “Why walk so far? The hut is just there. Cut across; save your legs. Come straight to me.” But you remember the bones — and you remember you cannot know the wood’s numbers without walking its whole road.",
+              "prompt": "Stay on the markers, or cut across?",
+              "choices": [
+                {
+                  "label": "Stay on the red markers",
+                  "text": "You keep the path, down and around, and Raggeth’s voice sours from coaxing to a hiss as he sees you won’t be tricked."
+                },
+                {
+                  "label": "Cut across toward the hut",
+                  "danger": true,
+                  "advanceLabel": "Back to the markers — quickly",
+                  "text": "You step off the markers toward the close, easy hut — and the ground is not ground. The dark between the trees is the bone-field; it drags at your feet, and the corpse-light kindles ahead, smiling. This is how he takes travelers. The wood has you — but not yet. And you’d have reached him without the numbers, and lost anyway."
+                }
+              ],
+              "next": "rg_hut"
             },
             {
-              "label": "Cut across toward the hut",
-              "danger": true,
-              "advanceLabel": "Back to the markers — quickly",
-              "text": "You step off the markers toward the close, easy hut — and the ground is not ground. The dark between the trees is the bone-field; it drags at your feet, and the corpse-light kindles ahead, smiling. This is how he takes travelers. The wood has you — but not yet. And you’d have reached him without the numbers, and lost anyway."
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "raggeth",
+              "text": "Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. Raggeth wheedles you to cut across and save your legs. You have no count to lose now — but the bone-field is still the bone-field.",
+              "prompt": "Stay on the markers, or cut across?",
+              "choices": [
+                {
+                  "label": "Stay on the red markers",
+                  "text": "You keep the path, and his voice warms further, pleased you came so biddably."
+                },
+                {
+                  "label": "Cut across toward the hut",
+                  "danger": true,
+                  "advanceLabel": "Back to the markers — quickly",
+                  "text": "You step off the markers — and the ground is the bone-field; it drags at your feet, and the corpse-light kindles ahead, smiling. Even his own creature, the wood will swallow off the path. The wood has you — but not yet."
+                }
+              ],
+              "next": "rg_hut"
             }
-          ],
-          "next": "rg_hut"
+          ]
         },
         "rg_hut": {
           "gateless": true,
           "tag": "The Road to Raggeth",
           "title": "The Hut and the Hatch",
-          "voice": "raggeth",
           "buildNote": "REAL-WORLD: put a physical 'KEEP CLOSED' sign on the actual hut hatch — there may be real wasps in there.",
-          "text": "The long way round brings you to the hut at last — small and mean and very old, its boards weeping rot, the cauldron seething before it. Raggeth is a cold thinness in the air. On the hut’s face is a small black hatch, and the voice turns silky: “There’s a treasure behind that hatch — the king’s last gold, perhaps. Open it. Go on — open it, and see.”",
-          "prompt": "Open the hatch, or leave it?",
-          "choices": [
+          "scenes": [
             {
-              "label": "Leave the hatch shut",
-              "text": "You don’t touch it. The answer was never behind a door he wants you to open. Raggeth’s voice curdles with annoyance."
+              "when": {
+                "equals": {
+                  "road": "hero"
+                }
+              },
+              "voice": "raggeth",
+              "text": "The long way round brings you to the hut at last — small and mean and very old, its boards weeping rot, the cauldron seething before it. Raggeth is a cold thinness in the air. On the hut’s face is a small black hatch, and the voice turns silky: “There’s a treasure behind that hatch — the king’s last gold, perhaps. Open it. Go on — open it, and see.”",
+              "prompt": "Open the hatch, or leave it?",
+              "choices": [
+                {
+                  "label": "Leave the hatch shut",
+                  "text": "You don’t touch it. The answer was never behind a door he wants you to open. Raggeth’s voice curdles with annoyance."
+                },
+                {
+                  "label": "Open the hatch",
+                  "danger": true,
+                  "advanceLabel": "Leave the hatch shut — back away",
+                  "text": "Your hand goes to the latch — and a night’s worth of warnings catch you a beat too late: the hatch is not where the treasure is. It’s where his swarm is. Get back!"
+                }
+              ],
+              "next": "rg_confront"
             },
             {
-              "label": "Open the hatch",
-              "danger": true,
-              "advanceLabel": "Leave the hatch shut — back away",
-              "text": "Your hand goes to the latch — and a night’s worth of warnings catch you a beat too late: the hatch is not where the treasure is. It’s where his swarm is. Get back!"
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
+              "voice": "raggeth",
+              "buildNote": "REAL-WORLD: physical 'KEEP CLOSED' sign on the hatch — possible wasps.",
+              "text": "The long way round brings you to the hut — small and mean, the cauldron seething. Raggeth is a cold gathered nothing in the air. He points you to the black hatch: “Your reward’s within, little one. Take it.”",
+              "prompt": "Open the hatch, or leave it?",
+              "choices": [
+                {
+                  "label": "Leave the hatch shut",
+                  "text": "You don’t touch it. Even now, some caution holds — though you tell yourself it’s only good manners with a host."
+                },
+                {
+                  "label": "Open the hatch",
+                  "danger": true,
+                  "advanceLabel": "Leave the hatch shut — back away",
+                  "text": "Your hand goes to the latch — and it’s not treasure behind it but his swarm, boiling out. Get back!"
+                }
+              ],
+              "next": "rg_enslave"
             }
-          ],
-          "next": "rg_confront"
+          ]
         },
         "rg_confront": {
           "gateless": true,
@@ -997,9 +1163,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron flares; Raggeth laughs. “You didn’t walk my road — you guessed.” Picture the road from the pond: the benches among the wildflowers, the benches by the picnic place. Count them again — only those from the pond onward, not the pond’s own.",
-                "It flares higher, and the wood darkens a notch. Walk it again in your mind, bench by bench, from the moment you left the pond to his door. Name that number.",
-                "Higher still — but steady. The resting-benches, from the pond onward. Say the true number, and the blow lands."
+                "The cauldron flares green and Raggeth laughs. “You didn’t count them, did you?” Try again — the resting-benches, from the pond onward only.",
+                "Think back along the road — the long incline, the meadow’s edge. Five places to sit lay between the pond and this hut."
               ]
             },
             {
@@ -1014,9 +1179,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron flares; Raggeth laughs. “You didn’t walk my road — you guessed.” Picture the road from the pond: the benches among the wildflowers, the benches by the picnic place. Count them again — only those from the pond onward, not the pond’s own.",
-                "It flares higher, and the wood darkens a notch. Walk it again in your mind, bench by bench, from the moment you left the pond to his door. Name that number.",
-                "Higher still — but steady. The resting-benches, from the pond onward. Say the true number, and the blow lands."
+                "The cauldron flares green and Raggeth laughs. “You didn’t count them, did you?” Try again — the resting-benches, from the pond onward only.",
+                "Think back along the road — the long incline, the meadow’s edge. Five places to sit lay between the pond and this hut."
               ]
             },
             {
@@ -1026,9 +1190,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron flares; Raggeth laughs. “You didn’t walk my road — you guessed.” Picture the road from the pond: the benches among the wildflowers, the benches by the picnic place. Count them again — only those from the pond onward, not the pond’s own.",
-                "It flares higher, and the wood darkens a notch. Walk it again in your mind, bench by bench, from the moment you left the pond to his door. Name that number.",
-                "Higher still — but steady. The resting-benches, from the pond onward. Say the true number, and the blow lands."
+                "The cauldron flares green and Raggeth laughs. “You didn’t count them, did you?” Try again — the resting-benches, from the pond onward only.",
+                "Think back along the road — the long incline, the meadow’s edge. Five places to sit lay between the pond and this hut."
               ]
             }
           ],
@@ -1049,9 +1212,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The rot surges back up the gold. “Guessing again,” Raggeth purrs. The picnic place — the feast-tables in the warm gold light, where the meadow begged you to stay. Count them again.",
-                "It flares, and the dark leans closer. Only the meadow’s tables, mind. Name them true.",
-                "Almost. The feast-tables of the bright meadow. The number is waiting; say it."
+                "The green flares higher. “Guessing won’t save you.” The feast-tables — picture the bright picnic place.",
+                "Four tables stood in the gold light where he tried to make you stay."
               ]
             },
             {
@@ -1066,9 +1228,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The rot surges back up the gold. “Guessing again,” Raggeth purrs. The picnic place — the feast-tables in the warm gold light, where the meadow begged you to stay. Count them again.",
-                "It flares, and the dark leans closer. Only the meadow’s tables, mind. Name them true.",
-                "Almost. The feast-tables of the bright meadow. The number is waiting; say it."
+                "The green flares higher. “Guessing won’t save you.” The feast-tables — picture the bright picnic place.",
+                "Four tables stood in the gold light where he tried to make you stay."
               ]
             },
             {
@@ -1078,9 +1239,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The rot surges back up the gold. “Guessing again,” Raggeth purrs. The picnic place — the feast-tables in the warm gold light, where the meadow begged you to stay. Count them again.",
-                "It flares, and the dark leans closer. Only the meadow’s tables, mind. Name them true.",
-                "Almost. The feast-tables of the bright meadow. The number is waiting; say it."
+                "The green flares higher. “Guessing won’t save you.” The feast-tables — picture the bright picnic place.",
+                "Four tables stood in the gold light where he tried to make you stay."
               ]
             }
           ],
@@ -1115,9 +1275,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron screams and gutters. The faces — where the trail cut through the great fallen tree, crowded thick in every trunk around the gap. Count them again.",
-                "It flares; the wood groans. Only the fallen-tree faces. If the fairy gave you her number, trust it now.",
-                "Almost. The watching faces at the fallen tree. Name the last true number, and his binding breaks."
+                "The cold deepens. “You walked right past them.” The watching faces — where the trail cut through the fallen tree.",
+                "Seven faces crowded that gap. If the fairy gave you the number, trust her."
               ]
             },
             {
@@ -1127,9 +1286,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron screams and gutters. The faces — where the trail cut through the great fallen tree, crowded thick in every trunk around the gap. Count them again.",
-                "It flares; the wood groans. Only the fallen-tree faces. If the fairy gave you her number, trust it now.",
-                "Almost. The watching faces at the fallen tree. Name the last true number, and his binding breaks."
+                "The cold deepens. “You walked right past them.” The watching faces — where the trail cut through the fallen tree.",
+                "Seven faces crowded that gap. If the fairy gave you the number, trust her."
               ]
             },
             {
@@ -1142,9 +1300,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron screams and gutters. The faces — where the trail cut through the great fallen tree, crowded thick in every trunk around the gap. Count them again.",
-                "It flares; the wood groans. Only the fallen-tree faces. If the fairy gave you her number, trust it now.",
-                "Almost. The watching faces at the fallen tree. Name the last true number, and his binding breaks."
+                "The cold deepens. “You walked right past them.” The watching faces — where the trail cut through the fallen tree.",
+                "Seven faces crowded that gap. If the fairy gave you the number, trust her."
               ]
             },
             {
@@ -1154,9 +1311,8 @@
                 "fumbled": true
               },
               "hints": [
-                "The cauldron screams and gutters. The faces — where the trail cut through the great fallen tree, crowded thick in every trunk around the gap. Count them again.",
-                "It flares; the wood groans. Only the fallen-tree faces. If the fairy gave you her number, trust it now.",
-                "Almost. The watching faces at the fallen tree. Name the last true number, and his binding breaks."
+                "The cold deepens. “You walked right past them.” The watching faces — where the trail cut through the fallen tree.",
+                "Seven faces crowded that gap. If the fairy gave you the number, trust her."
               ]
             }
           ],
@@ -1187,6 +1343,28 @@
               "text": "“Five, and four, and seven,” you say at last — and the wood’s own count closes around Raggeth, though you reached it the hard way, by guess and recount, the wood darkening at each wrong word. The cauldron screams and splits; the rot drains into the ground; and Raggeth comes apart with his pot, unraveling into nothing. The wood will live, and the king will rise. But it was clumsy and costly, and you’ll always know there was a cleaner road — that a sharper eye on the long walk would have spared the dark its last gloating. Still: you walked the whole dark way, you did not give in, and you named it true. That is no small thing. From the wreck you lift the heart of the crown; the three caps and the heart make it whole, and the king rises, and dawn comes."
             }
           ]
+        },
+        "rg_enslave": {
+          "gateless": true,
+          "tag": "The Road to Raggeth",
+          "title": "The Bargain",
+          "voice": "raggeth",
+          "text": "The cold gathered nothing that is Raggeth leans close. “You came,” he purrs. “And you brought it.” You hold out the king’s gold — the two caps, kindness and cleverness, all you gathered on the road — and you name your price: spare me, reward me, give me a place in the wood you’ll rule, let the rot never touch me.\n\n“Of course,” says Raggeth, sweet as honey. “Of course, clever one. Give it here.”\n\nAnd you set the king’s gold in the dark’s own hand.\n\nThe instant you do, you understand. The rot was never going to spare you — the rot makes no bargains; it only makes more rot. It crawls up from the caps, over your hand, up your arm, cold and certain — and Raggeth laughs, not cruelly, almost fondly. “You brought me gold, little one. But you never brought courage — the one thing I could never take from a heart that kept it. And you?” The cold reaches toward your chest. “You gave yours away, back at the graves. Handed it to me yourself. There was never a bargain here. There was only ever this.”",
+          "ending": {
+            "tone": "bad",
+            "note": "🩸 The Enslavement",
+            "exits": [
+              {
+                "label": "Accept the dark — THE END",
+                "danger": true,
+                "reveal": "The cold closes over you, and the last warm thing in you goes out, and you are his — his creature, his new herald, one more cold voice in the wood to call the next traveler off the path. The king dies that night. The forest falls dark. And somewhere on the trail, in a sweet and friendly voice, you find yourself beginning to whisper to someone new: “Why walk so far? Cut across. Come straight to me.”"
+              },
+              {
+                "label": "Flee — tear free while an ember’s left",
+                "reveal": "Something in you — some last coal you hadn’t quite handed over — recoils, and you wrench your arm from the rot and run, the dark searing a mark into you that will never fully fade, out of the hut and down the red markers and away. You don’t stop until the trees thin and a real morning finds you. You’re alive. You’re free. You are not the same, and never will be — you saw exactly what you were willing to become, and how near you came to it. The king is gone, and the wood is rotting, and that is on you, and you’ll carry it. But you ran. That has to be worth something."
+              }
+            ]
+          }
         }
       }
     }

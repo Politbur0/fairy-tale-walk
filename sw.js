@@ -15,7 +15,7 @@
  *
  * Still bump CACHE_VERSION when you want to force-purge old caches on activate.
  */
-var CACHE_VERSION = 'ftw-cache-v11';
+var CACHE_VERSION = 'ftw-cache-v12';
 
 var PRECACHE = [
   './',
@@ -23,7 +23,7 @@ var PRECACHE = [
   './styles.css',
   './app.js',
   './manifest.webmanifest',
-  './data/story.json?v=6',   // version-locked URL app.js actually requests (keep in sync)
+  './data/story.json?v=7',   // version-locked URL app.js actually requests (keep in sync)
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
