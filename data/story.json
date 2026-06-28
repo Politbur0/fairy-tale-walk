@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": 5,
+    "version": 6,
     "note": "Story is DATA. v5 = cake choice DECOUPLED from the Hero/Pawn road (master blueprint Q5). Post 3 cake sets fox alive (fox_ally) or dead + `marked` (the first dark mark) — it does NOT set road. The Post 4 fork (gentle/rugged) is the real split, open to everyone, and BOTH choices set road=hero (provisional). RUGGED arm = always Hero; fox_ally picks the fox-alive vs fox-dead rugged scenes, so a cake-keeper who goes rugged now reaches the fox-DEAD scenes and the counting finale as a Hero. PAWN identity is sealed only on the GENTLE path: the cemetery (wp5) gates on `marked` — unmarked = normal Hero cemetery; marked = redemption hinge (light candle -> redeemed Hero; refuse -> fallen + road=pawn = sealed Pawn). The pond gates on road: hero -> counting/home finale; pawn -> sealed-pawn serve/enslaved STUB (finale still to be written). Retired the old cake=Hero/Pawn hard split, the Post 4 Raggeth recruitment, and the marked_dark/defiant flags. Counting finale (5 benches from after the pond / 4 tables / 7 faces; retry=flare+hint+fumbled, never dead-ends; has_number AND !fumbled -> Crown Reborn else Pyrrhic) is unchanged from v4. Render order: text->choice result->seasonalIntro->textCont->variant->endingVariant->textAfter."
   },
   "config": {
@@ -788,6 +788,22 @@
                   "when": {
                     "allTrue": [
                       "timid"
+                    ],
+                    "allFalse": [
+                      "fox_ally"
+                    ]
+                  },
+                  "audio": "crown/end_long_watch_alone.mp3",
+                  "ending": {
+                    "tone": "good",
+                    "note": "✦ The Long Watch"
+                  },
+                  "text": "One by one you press the golden caps home, and light runs through the crown and steadies the king — but you flinched, once, when it counted, and the ending is a quieter one. The king lives; the wood will live. No retinue comes to walk you out — and no fox either, for you left him cold on the road a long night ago. Only the moth lights you to the road’s edge, faithful to the last, and then even that is gone. “You saved my forest,” the king says, gentler than a bell. “Go home — and be braver, and kinder, next time. There is always a next time, in a wood.” You walk out alone into the grey, and you know the shape of every choice that brought you here. Your story is complete."
+                },
+                {
+                  "when": {
+                    "allTrue": [
+                      "timid"
                     ]
                   },
                   "audio": "crown/end_long_watch.mp3",
@@ -796,6 +812,35 @@
                     "note": "✦ The Long Watch"
                   },
                   "text": "One by one you press the golden caps home into the bare ring of the crown, and light runs through it and steadies the king — but you flinched, once, on the way here, when it counted, and the ending is a quieter one. The king lives; the wood will live. No retinue of friends comes to walk you out; the moth lights you to the road, faithful to the last, and that is enough, and it is a little lonely. “You saved my forest,” the king says, gentler than a bell. “Go home in honor — and be a little braver next time. There is always a next time, in a wood.” The face-trees open their eyes as you pass, and watch you go, and do not quite smile. Your story is complete."
+                },
+                {
+                  "when": {
+                    "allFalse": [
+                      "fox_ally"
+                    ],
+                    "allTrue": [
+                      "redeemed"
+                    ]
+                  },
+                  "audio": "crown/end_gentle_dawn_redeemed.mp3",
+                  "ending": {
+                    "tone": "good",
+                    "note": "✦ The Gentle Dawn"
+                  },
+                  "text": "One by one you press the golden caps home into the bare ring of the king’s crown — and light runs through it like dawn through water, and does not stop. It pours from the crown into the king, into the roots, out through the whole black wood; the rot draws back into the earth, and all around the pond the dying simply stops. The heart-well clears and rises. King Bolete stands — tall, and shining, and saved — and looks a long, kind moment at you, and at the scar where the dark had almost taken root. “You carried my crown out of the dark,” he says, “and you carried yourself back out of it too, which is the harder road. Go home in honor.” And you do go home — but you go alone. No fox runs at your heel; you left him cold in the leaves a whole night ago and a whole life ago, and no waking forest gives the dead back. The face-trees open their eyes as you pass and watch you go, gravely, and you cannot quite meet them. You saved the king. You saved the forest. You turned back from the dark when it had its hand on you — and you walk home alone, and you know exactly why. Your story is complete.\n\nFar off in the deep wood a thin green smoke still rises — Raggeth, unbeaten, biding. But that is a tale for another day. Tonight you won — and you paid for it."
+                },
+                {
+                  "when": {
+                    "allFalse": [
+                      "fox_ally"
+                    ]
+                  },
+                  "audio": "crown/end_gentle_dawn_alone.mp3",
+                  "ending": {
+                    "tone": "good",
+                    "note": "✦ The Gentle Dawn"
+                  },
+                  "text": "One by one you press the golden caps home into the bare ring of the king’s crown — and the moment the third is set, light runs through it like dawn through water, and does not stop. It pours from the crown into the king, into the roots, out through the whole black wood; the rot draws back into the earth, and all around the pond the dying simply stops. The heart-well clears and rises, and King Bolete stands — tall, and shining, and saved. “You carried my crown out of the dark and made me whole,” he says, his voice a bell now. “Go home in honor.” And you walk home — but you walk it alone. No fox runs at your heel: you left him cold in the leaves at the start of the road, and a saved and singing forest does not give the dead back. The face-trees open their eyes to watch you pass, and some of them soften toward you, slowly — you did save them — though you carry the one small cruelty you let into the wood like a stone you cannot set down. You saved the king. You saved the forest. You did it with a cold place in you that the long night never quite warmed. Your story is complete.\n\nFar off in the deep wood a thin green smoke still rises — Raggeth, unbeaten, biding. But that is a tale for another day. Tonight, you have won."
                 },
                 {
                   "default": true,
