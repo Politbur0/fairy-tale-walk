@@ -1,0 +1,1273 @@
+THE CROWN OF THE MUSHROOM KING
+THE WALKTHROUGHS — every major road, readable start to finish
+
+Generated from data/story.json (story version 10) by tools/gen-walkthroughs.py.
+Each walk below is exactly what one walker reads, in order. The pond is shown
+in its SPRING (full-water) version. ">> YOU CHOOSE" marks the taps.
+
+THE SHAPE OF THE STORY
+----------------------
+POST 1  The Entrance         the moth, the dying king, the honey-cake
+POST 2  Into the Forest      the flies, the face-trees, the warnings — commit, or turn back (soft ending)
+POST 3  The Great Old Tree   GIVE the cake (the fox lives) ... or KEEP it (the fox dies; you are marked)
+POST 4  The Fork             GENTLE right (level, quicker) ... or RUGGED straight (steep, longer, gifts)
+  gentle -> POST 5 The Cemetery:
+     unmarked: light the candle (a knight joins you) / tiptoe past (timid)
+     marked:   light the candle (redeemed)          / leave it dark (PAWN — no courage cap)
+  rugged -> R1 Marker Tree -> R2 Bottom of the Hill (stick?) -> R3 Fairy Spring
+            (her NUMBER or her STRENGTH) -> R4 Tree-Face Grove (strength or watch)
+            -> R5 the Steep Incline (Cap of Courage) — fox alive or dead shapes throughout
+POST 6  The Way to the Pond  (hero climb / the pawn's easy walk)
+POST 7  THE POND — the last QR post:
+  HERO: set the caps (home endings) ... or keep them and go end Raggeth forever
+  PAWN: carry the gold to Raggeth ... or abandon everyone and go home
+THE ROAD TO RAGGETH (in-app, no posts): deep wood -> wildflower meadow (count the
+  BENCHES — 5, from the pond onward only) -> picnic place (count the TABLES — 4)
+  -> fallen-tree faces (count the FACES — 7) -> the lair -> the hut & hatch ->
+  name the three numbers to unmake him.
+
+THE ENDINGS
+-----------
+  ✦ The Gentle Dawn      hero, home (three shapes: fox alive / fox dead / redeemed)
+  ✦ The Long Watch       hero, home, but you flinched at the graves
+  ★ The Crown Reborn     named the count true — Raggeth unmade, the crown whole forever
+  ✦ The Pyrrhic Crown    won the count the hard way (fumbled along the road)
+  ❄ The Cold Walk Home   the pawn who abandons everyone (bleak, safe)
+  🩸 The Enslavement      the pawn who serves — accept the dark, or flee with an ember
+  (and the Post 2 refusal — a soft ending that offers to turn you around)
+
+THE REFUSAL (Post 2) — for completeness
+---------------------------------------
+You turn for the road, and the daylight, and home. The moth does not plead. It only dims. Behind you, as you go, the last of its light gutters out, and the wood draws its silence closed over the king, and over the fox who waited, and over the dead who were never avenged. By morning there is no forest here at all — only ash, and bone, and a cold that came to stay. You were the last one it sent for.
+
+    ═══ ENDING: THE END ═══
+    ("Wait. Turn back. You’ll go." — and the walk resumes.)
+
+
+========================================================================
+WALK — 1 · THE BRIGHT ROAD HOME
+Give the cake · gentle path · light the candle · mend the crown at the pond.
+Ending: ✦ The Gentle Dawn (the fox at your side, the wood singing).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Give the honey-cake"
+
+He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you. You will not walk this wood alone.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to a small graveyard — a dozen old stones, leaning every which way in the grey light. These are the king’s knights, the last of the old mushroom-guard, who stood against Raggeth an age ago and fell to the last, and were never avenged. The wood forgot them. The rot has not — it creeps among the stones like spilled ink.
+
+At the center stands one great cracked stone, and at its foot a candle, long gone cold. “The last cap is here,” the moth breathes, “in the keeping of the dead. They will not give it to the timid. You must wake their captain — and you must not look away when he wakes.”
+
+  >> YOU CHOOSE: "Light the candle"
+
+Your hands shake so badly you can barely breathe on the wick — but it catches, one small gold flame in a sea of grey. The great stone splits. Something rises from it: a knight of blackened oak and toadstool, vast, its eyes two coals, an age of grief in its ruined face. It would be so easy to run. You do not run. For a long, cold moment the dead captain weighs you — then slowly bows. “Courage,” it says, in a voice like a closing tomb, “is the last gold, and it is bought with fear, not the lack of it.” It lays the third cap in your hand, and then it does not sink back. It takes up its broken sword and falls in at your shoulder. “We could not save the king. We will see you to him. And when you face Raggeth — for you will — we will not look away, and neither will you.” You walk on with a dead knight at your side.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.
+
+“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Set the caps in the crown — your task is done"
+
+One by one you press the golden caps home into the bare ring of the king’s crown — and the moment the third is set, light runs through it like dawn through water, and does not stop. It pours from the crown into the king, into the throne, into the roots, out through the whole black wood. King Bolete straightens, grey going green, his crown blazing gold; the rot draws back into the earth; and all around the pond, the dying simply stops. The heart-well answers him, its waters clearing and rising. The king stands — tall, and shining, and saved — and his voice is no longer a whisper but a bell: “You carried my crown out of the dark and made me whole. Go home in honor, brave one. The wood will sing your name.” As you walk back down through the trees, the forest is already waking around you — green returning, birdsong, the face-trees opening their eyes to watch you pass and, one by one, beginning to smile. You saved the king. You saved the forest. Your story is complete.
+
+Far off in the deep wood a thin green smoke still rises — Raggeth, unbeaten, biding. But that is a tale for another brave soul, another day. Tonight, you have won.
+
+    ═══ ENDING: ✦ The Gentle Dawn ═══
+
+
+========================================================================
+WALK — 2 · THE KNIGHT'S CRUSADE
+Give the cake · gentle path · light the candle · refuse to stop at the pond —
+carry the caps to Raggeth with the dead captain at your shoulder, and count true.
+Ending: ★ The Crown Reborn (the captain's watch ends).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Give the honey-cake"
+
+He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you. You will not walk this wood alone.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to a small graveyard — a dozen old stones, leaning every which way in the grey light. These are the king’s knights, the last of the old mushroom-guard, who stood against Raggeth an age ago and fell to the last, and were never avenged. The wood forgot them. The rot has not — it creeps among the stones like spilled ink.
+
+At the center stands one great cracked stone, and at its foot a candle, long gone cold. “The last cap is here,” the moth breathes, “in the keeping of the dead. They will not give it to the timid. You must wake their captain — and you must not look away when he wakes.”
+
+  >> YOU CHOOSE: "Light the candle"
+
+Your hands shake so badly you can barely breathe on the wick — but it catches, one small gold flame in a sea of grey. The great stone splits. Something rises from it: a knight of blackened oak and toadstool, vast, its eyes two coals, an age of grief in its ruined face. It would be so easy to run. You do not run. For a long, cold moment the dead captain weighs you — then slowly bows. “Courage,” it says, in a voice like a closing tomb, “is the last gold, and it is bought with fear, not the lack of it.” It lays the third cap in your hand, and then it does not sink back. It takes up its broken sword and falls in at your shoulder. “We could not save the king. We will see you to him. And when you face Raggeth — for you will — we will not look away, and neither will you.” You walk on with a dead knight at your side.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.
+
+“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Keep the caps, and go end Raggeth forever"
+
+“Then keep the gold,” the king says. “You’ll need it for what waits.” The moth flutters down before your face, its small light trembling. “This is where I must leave you. I cannot go where he is — his dark would snuff me out in a breath. You go alone from here.”
+
+“But listen first, for this is how he is beaten. Raggeth’s rot is bound to this wood by the wood’s own count — and the wood will tell you the numbers, if you walk its whole length and pay attention. As you go, count three things. The resting-benches along the road — not these here by the pond, mind, but the ones from here onward to his hut. The feast-tables in the bright meadow. And the watching faces where the trail cuts through the fallen tree. Three true numbers. Carry them to him, name them aloud, and his binding breaks. You cannot learn them by cutting across — only by walking the road. So walk it.”
+
+It rests a moment against your cheek, light as ash. “Follow the red tree-arrows, and only them. You’ll see his hut across the hollow before the path reaches it; never leave the markers — the wood between is where the bones are. Go bravely. And come back.” The light lifts away, and then the moth is gone.
+
+· · · THE ROAD TO RAGGETH — INTO THE DEEP WOOD · · ·
+
+You cross from the pond and the red markers take you down into the deep wood — darker here than anywhere, no moth, no king, no fox — but the dead captain climbs the rise at your shoulder, silent, his broken sword bare, keeping the word he gave you at the graves. You do not walk this last road alone. The dark does not last. The trees thin, the ground rises in a long gentle climb, and the path carries you up, out of the gloom, toward a growing light ahead.
+
+· · · THE ROAD TO RAGGETH — THE WILDFLOWER MEADOW · · ·
+
+You come out into sudden light: a wide wildflower meadow, warm and gold and humming with bees, lovely past belief so near the dark one’s house. And Raggeth’s voice drifts sweet across it: “There now. Rest. You’ve come so far. The king has waited this long; he can wait a while more.” Benches sit among the flowers, set just so, inviting.
+
+[Count the resting-benches as you go — and remember, only those from the pond onward, never the pond’s own.]
+
+· · · THE ROAD TO RAGGETH — THE PICNIC PLACE · · ·
+
+The path leads on to a quiet picnic place, tables in the warm gold light, and the pull to stop is strong — the wood’s craftiest trick, not to scare you back but to keep you.
+
+[Count the feast-tables here in the meadow.]
+
+  >> YOU CHOOSE: "Rest a moment, then walk on"
+
+You sit, you breathe, you let your legs recover — and then you stand and go, because no meadow will make you forget the grey king and the dying wood. Resting was wise; rising was braver.
+
+· · · THE ROAD TO RAGGETH — THE FALLEN-TREE FACES · · ·
+
+You come to the fallen tree calm — legs recovered, head clear, the meadow’s ease behind you and no hold on you — and the trail cuts straight through the great trunk where the carved faces crowd thickest, watching from every bough around the gap.
+
+[Count the watching faces here at the fallen tree.]
+
+· · · THE ROAD TO RAGGETH — THE LAIR IN SIGHT · · ·
+
+Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. The path bends the long way round, and the cold voice wheedles: “Why walk so far? The hut is just there. Cut across; save your legs. Come straight to me.” But you remember the bones — and you remember you cannot know the wood’s numbers without walking its whole road.
+
+  >> YOU CHOOSE: "Stay on the red markers"
+
+You keep the path, down and around, and Raggeth’s voice sours from coaxing to a hiss as he sees you won’t be tricked.
+
+· · · THE ROAD TO RAGGETH — THE HUT AND THE HATCH · · ·
+
+The long way round brings you to the hut at last — small and mean and very old, its boards weeping rot, the cauldron seething before it. Raggeth is a cold thinness in the air. On the hut’s face is a small black hatch, and the voice turns silky: “There’s a treasure behind that hatch — the king’s last gold, perhaps. Open it. Go on — open it, and see.”
+
+  >> YOU CHOOSE: "Leave the hatch shut"
+
+You don’t touch it. The answer was never behind a door he wants you to open. Raggeth’s voice curdles with annoyance.
+
+· · · THE ROAD TO RAGGETH — THE COUNT IS THE WEAPON · · ·
+
+“So. The king’s little counter, come to my door.”
+
+And at your shoulder the dead captain plants his feet and does not look away from the dark — just as he swore he wouldn’t, an age of grief gone steady and grim — and so neither do you.
+
+The cauldron seethes, the rot crawling up green and sick. And you understand what the moth meant: the rot is bound to the wood by the wood’s own count, and to break it you must name the three true numbers aloud — the benches, the tables, the faces.
+
+First: the resting-benches along the road, counting only from the pond onward.
+
+  >> YOU CHOOSE: "Five"
+
+“Five,” you say — and the first true number lands like a hammer-blow. The cauldron cracks; the green boil shudders; Raggeth’s sneer falters.
+
+· · · THE ROAD TO RAGGETH — THE SECOND NUMBER · · ·
+
+“Lucky,” Raggeth hisses, but the cold has thinned. The second number now: the feast-tables in the bright meadow.
+
+  >> YOU CHOOSE: "Four"
+
+“Four,” you say — and the second number lands; the cauldron splits further, and Raggeth’s voice climbs toward a snarl.
+
+· · · THE ROAD TO RAGGETH — THE LAST NUMBER · · ·
+
+The cauldron is cracked rim to foot now, leaking green; Raggeth is a fury with no warmth left. One number remains — the watching faces at the cut through the fallen tree.
+
+Count them once more in your memory — the faces crowded thick where the great trunk had fallen across the path.
+
+  >> YOU CHOOSE: "Seven"
+
+“Five, and four, and seven,” you say — and you counted every one of them yourself, on the long dark road, with no gift to lean on and no voice to remind you. The wood’s own count closes around Raggeth like a fist. The cauldron screams and splits from rim to foot; the rot pours out into the starving ground and is gone; and Raggeth — the cold, the thinness, the dry voice — comes apart with his pot, unraveling into nothing with one last astonished sigh. Far off you hear the watching faces, every one, waking and glad. From the wreck you lift the last and truest gold — the heart of the king’s crown, that Raggeth held. You carry it home through a wood already greening behind you, and at the castle you set the three caps and the heart together into the crown, and it is whole — forever whole, this time — and King Bolete rises shining, and the long night ends in dawn. You walked the whole dark way and missed nothing. The forest will not forget it.
+
+And beside you the dead captain lowers his broken sword at last, an age of grief gone quiet in his ruined face. “We could not save the king,” he says — the words he has carried since the wood forgot him. “You did.” He bows, low, and does not rise; and where he stood there is only the first of the dawn — his word kept, his watch ended, his rest earned.
+
+    ═══ ENDING: ★ The Crown Reborn ═══
+
+
+========================================================================
+WALK — 3 · THE FAIRY'S SEVEN
+Give the cake · the rugged road (scout the fox, take a stick, ask the fairy for
+her NUMBER, ask the grove to keep watch) · to Raggeth · name the count clean.
+Ending: ★ The Crown Reborn (her gift returns at the very end).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Give the honey-cake"
+
+He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you. You will not walk this wood alone.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the rugged path (straight ahead)"
+
+You choose the hard road — straight on, down into the stony hollow, the longer and steeper way — and you choose it knowing exactly what it costs, for the gifts the king’s old friends keep there. “Clear-eyed, and bold with it,” the moth says, half a laugh and half a worry. “That is the second gold — and you’ll have need of the rest before this road is done.” The Cap of Cleverness settles warm in your pocket. The trail pitches down before you into the dark.
+
+     * You gather the Cap of Cleverness. *
+
+· · · THE RUGGED ROAD · R1 — THE MARKER TREE · · ·
+
+The rugged way tips downward past a leaning marker, into a hollow of black trees you cannot see the bottom of. The fox pads up beside you, ears pricked, glad of the hard road. “The old way,” he says, dry and warm. “The way of the king’s friends. Few take it now.” Below, the trail drops away into shadow.
+
+  >> YOU CHOOSE: "Send him ahead to scout"
+
+He slips into the dark to read the way for you. You walk the drop alone a while — but you will know what is coming.
+
+· · · THE RUGGED ROAD · R2 — THE BOTTOM OF THE HILL · · ·
+
+Before you’re even down, the fox comes streaking back up out of the dark, low and quick, eyes bright. “The bend goes right,” he pants, “long and flat from here to the pines — nothing waits but the walking.” You reach the bottom already knowing its shape, and it falls out just as he said: the trail levels and bends away right, toward a stand of distant pines. At your feet, among the leaf-litter, lie fallen branches — stout, straight, stick-high.
+
+  >> YOU CHOOSE: "Take a stick"
+
+You choose a good straight one, test your weight on it, tuck it under your arm. It’s nothing now, here on the flat — but there’s a hill between you and the king.
+
+· · · THE RUGGED ROAD · R3 — THE FAIRY SPRING · · ·
+
+The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.
+
+The fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”
+
+You drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”
+
+  >> YOU CHOOSE: "Ask for a number to remember"
+
+“Then hold this,” she whispers. “Seven. When you stand before the dark one and must name the watching faces of the wood, you will be glad you carried it. Seven. Don’t let the fear knock it loose.” You don’t know yet what it means — but you will hold it.
+
+· · · THE RUGGED ROAD · R4 — THE TREE-FACE GROVE · · ·
+
+The path runs into a grove thick with carved faces — the watching wood, more awake here near the spring’s clean magic, eyes opening as you pass. The fox pads close to your leg, unbothered; they know him too. “A friend of the king,” they murmur, trunk to trunk. “The fairy spoke of you. We have two gifts, and you may take one.”
+
+  >> YOU CHOOSE: "Ask the grove to keep watch at your back"
+
+“Then we will hold the dark behind you, as far as we can reach.” Their watching cousins line the road ahead; on the long walk to Raggeth, the dark will press less close at your heels.
+
+· · · THE RUGGED ROAD · R5 — THE STEEP INCLINE · · ·
+
+The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.
+
+The dark should be crowding you here, this close to the top, but it doesn’t: somewhere behind, the grove’s watching cousins are holding it off your heels, and you climb with your back unafraid.
+
+You set your stick to the cold rock and haul up on it — glad past words you stooped for it at the bottom of the hill.
+
+  >> YOU CHOOSE: "Dig in and climb hard"
+
+You haul up without stopping and crest the top, breath ragged, legs aflame. “The last gold,” says the fox, or the wind. “You climbed.”
+
+     * You gather the Cap of Courage. *
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You stride over the last rise, breath still ragged and legs aflame.
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Keep the caps, and go end Raggeth forever"
+
+“Then keep the gold,” the king says. “You’ll need it for what waits.” The moth flutters down before your face, its small light trembling. “This is where I must leave you. I cannot go where he is — his dark would snuff me out in a breath. You go alone from here.”
+
+“But listen first, for this is how he is beaten. Raggeth’s rot is bound to this wood by the wood’s own count — and the wood will tell you the numbers, if you walk its whole length and pay attention. As you go, count three things. The resting-benches along the road — not these here by the pond, mind, but the ones from here onward to his hut. The feast-tables in the bright meadow. And the watching faces where the trail cuts through the fallen tree. Three true numbers. Carry them to him, name them aloud, and his binding breaks. You cannot learn them by cutting across — only by walking the road. So walk it.”
+
+It rests a moment against your cheek, light as ash. “Follow the red tree-arrows, and only them. You’ll see his hut across the hollow before the path reaches it; never leave the markers — the wood between is where the bones are. Go bravely. And come back.” The light lifts away, and then the moth is gone.
+
+· · · THE ROAD TO RAGGETH — INTO THE DEEP WOOD · · ·
+
+You cross from the pond and the red markers take you down into the deep wood — darker here than anywhere, no moth, no king, no fox, only you and the red arrows nailed to the black trees, one and then the next. For the first time all night, you are alone. The dark does not last. The trees thin, the ground rises in a long gentle climb, and the path carries you up, out of the gloom, toward a growing light ahead.
+
+And the dark keeps its distance as you go — the grove’s watching cousins lining the way, holding it back from your heels.
+
+· · · THE ROAD TO RAGGETH — THE WILDFLOWER MEADOW · · ·
+
+You come out into sudden light: a wide wildflower meadow, warm and gold and humming with bees, lovely past belief so near the dark one’s house. And Raggeth’s voice drifts sweet across it: “There now. Rest. You’ve come so far. The king has waited this long; he can wait a while more.” Benches sit among the flowers, set just so, inviting.
+
+[Count the resting-benches as you go — and remember, only those from the pond onward, never the pond’s own.]
+
+· · · THE ROAD TO RAGGETH — THE PICNIC PLACE · · ·
+
+The path leads on to a quiet picnic place, tables in the warm gold light, and the pull to stop is strong — the wood’s craftiest trick, not to scare you back but to keep you.
+
+[Count the feast-tables here in the meadow.]
+
+  >> YOU CHOOSE: "Rest a moment, then walk on"
+
+You sit, you breathe, you let your legs recover — and then you stand and go, because no meadow will make you forget the grey king and the dying wood. Resting was wise; rising was braver.
+
+· · · THE ROAD TO RAGGETH — THE FALLEN-TREE FACES · · ·
+
+You come to the fallen tree calm — legs recovered, head clear, the meadow’s ease behind you and no hold on you — and the trail cuts straight through the great trunk where the carved faces crowd thickest, watching from every bough around the gap.
+
+[Count the watching faces here at the fallen tree.]
+
+And you understand, now, what the fairy meant — count them, and you will find she gave you the truth.
+
+· · · THE ROAD TO RAGGETH — THE LAIR IN SIGHT · · ·
+
+Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. The path bends the long way round, and the cold voice wheedles: “Why walk so far? The hut is just there. Cut across; save your legs. Come straight to me.” But you remember the bones — and you remember you cannot know the wood’s numbers without walking its whole road.
+
+  >> YOU CHOOSE: "Stay on the red markers"
+
+You keep the path, down and around, and Raggeth’s voice sours from coaxing to a hiss as he sees you won’t be tricked.
+
+· · · THE ROAD TO RAGGETH — THE HUT AND THE HATCH · · ·
+
+The long way round brings you to the hut at last — small and mean and very old, its boards weeping rot, the cauldron seething before it. Raggeth is a cold thinness in the air. On the hut’s face is a small black hatch, and the voice turns silky: “There’s a treasure behind that hatch — the king’s last gold, perhaps. Open it. Go on — open it, and see.”
+
+  >> YOU CHOOSE: "Leave the hatch shut"
+
+You don’t touch it. The answer was never behind a door he wants you to open. Raggeth’s voice curdles with annoyance.
+
+· · · THE ROAD TO RAGGETH — THE COUNT IS THE WEAPON · · ·
+
+“So. The king’s little counter, come to my door.”
+
+The cauldron seethes, the rot crawling up green and sick. And you understand what the moth meant: the rot is bound to the wood by the wood’s own count, and to break it you must name the three true numbers aloud — the benches, the tables, the faces.
+
+First: the resting-benches along the road, counting only from the pond onward.
+
+  >> YOU CHOOSE: "Five"
+
+“Five,” you say — and the first true number lands like a hammer-blow. The cauldron cracks; the green boil shudders; Raggeth’s sneer falters.
+
+· · · THE ROAD TO RAGGETH — THE SECOND NUMBER · · ·
+
+“Lucky,” Raggeth hisses, but the cold has thinned. The second number now: the feast-tables in the bright meadow.
+
+  >> YOU CHOOSE: "Four"
+
+“Four,” you say — and the second number lands; the cauldron splits further, and Raggeth’s voice climbs toward a snarl.
+
+· · · THE ROAD TO RAGGETH — THE LAST NUMBER · · ·
+
+The cauldron is cracked rim to foot now, leaking green; Raggeth is a fury with no warmth left. One number remains — the watching faces at the cut through the fallen tree.
+
+The fairy’s word returns to you, clear as her cold spring: seven. You carried it for exactly this moment. Don’t let his snarling knock it loose.
+
+  >> YOU CHOOSE: "Seven"
+
+“Five, and four, and seven,” you say — and the fairy’s last gift returns to you clear at the very end, just as she promised it would. The wood’s own count closes around Raggeth like a fist. The cauldron screams and splits from rim to foot; the rot pours out into the starving ground and is gone; and Raggeth — the cold, the thinness, the dry voice — comes apart with his pot, unraveling into nothing with one last astonished sigh. Far off you hear the watching faces, every one, waking and glad. From the wreck you lift the last and truest gold — the heart of the king’s crown, that Raggeth held. You carry it home through a wood already greening behind you, and at the castle you set the three caps and the heart together into the crown, and it is whole — forever whole, this time — and King Bolete rises shining, and the long night ends in dawn. The forest is reborn, and it will not forget the one who saved it.
+
+    ═══ ENDING: ★ The Crown Reborn ═══
+
+
+========================================================================
+WALK — 4 · THE HARD-WON CROWN
+Give the cake · the rugged road the stumbling way (keep the fox close, travel
+light, take the fairy's STRENGTH, nearly turn back on the hill) · fall for the
+cut-across and the hatch · miss a count once.
+Ending: ✦ The Pyrrhic Crown (you won — the hard way).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Give the honey-cake"
+
+He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you. You will not walk this wood alone.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the rugged path (straight ahead)"
+
+You choose the hard road — straight on, down into the stony hollow, the longer and steeper way — and you choose it knowing exactly what it costs, for the gifts the king’s old friends keep there. “Clear-eyed, and bold with it,” the moth says, half a laugh and half a worry. “That is the second gold — and you’ll have need of the rest before this road is done.” The Cap of Cleverness settles warm in your pocket. The trail pitches down before you into the dark.
+
+     * You gather the Cap of Cleverness. *
+
+· · · THE RUGGED ROAD · R1 — THE MARKER TREE · · ·
+
+The rugged way tips downward past a leaning marker, into a hollow of black trees you cannot see the bottom of. The fox pads up beside you, ears pricked, glad of the hard road. “The old way,” he says, dry and warm. “The way of the king’s friends. Few take it now.” Below, the trail drops away into shadow.
+
+  >> YOU CHOOSE: "Keep him close"
+
+You would rather face it together than know it early. He stays at your heel, and you go down into the hollow side by side.
+
+· · · THE RUGGED ROAD · R2 — THE BOTTOM OF THE HILL · · ·
+
+You feel your way down together, the fox a warm shadow at your knee, neither of you knowing what the dark below holds until you’re standing in it. Then the ground levels, sudden, and the trail bends away right toward a stand of distant pines — and the fox huffs, pleased to have braved the blind drop beside you rather than send you down it alone. At your feet, among the leaf-litter, lie fallen branches — stout, straight, stick-high.
+
+  >> YOU CHOOSE: "Travel light"
+
+Your hands are free and your step is quick, and the flat is easy going. You don’t think about the climb yet.
+
+· · · THE RUGGED ROAD · R3 — THE FAIRY SPRING · · ·
+
+The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you climb down on your hands and heels, slipping the last foot to the water’s edge.
+
+The fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”
+
+You drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”
+
+  >> YOU CHOOSE: "Ask for a blessing of strength"
+
+“Then take strength instead,” she says, and the cold water warms in you, steadying your legs for the long climb and the longer dark. You’ll feel it carrying you up the hill — but you’ll have to count the faces yourself, and trust your own tally.
+
+· · · THE RUGGED ROAD · R4 — THE TREE-FACE GROVE · · ·
+
+The path runs into a grove thick with carved faces — the watching wood, more awake here near the spring’s clean magic, eyes opening as you pass. The fox pads close to your leg, unbothered; they know him too. “A friend of the king,” they murmur, trunk to trunk. “The fairy spoke of you. We have two gifts, and you may take one.”
+
+  >> YOU CHOOSE: "Ask the grove for strength on the road"
+
+Their warmth pours into you for what’s to come — the climb, and the dark beyond it. You’ll feel it carrying you up the hill.
+
+· · · THE RUGGED ROAD · R5 — THE STEEP INCLINE · · ·
+
+The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.
+
+But you do not meet it bare — the grove’s warmth and the fairy’s cold spring-water are both alive in your legs, and between them they take the worst of the hill before your own strength has to.
+
+  >> YOU CHOOSE: "Nearly turn back, then climb anyway"
+
+The night nearly beats you halfway up — but you crawl the last of it on will alone, and stand, shaking, at the top. You know exactly what this gold cost.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You come over the last rise on shaking legs. It nearly had you, that hill. But here you are.
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Keep the caps, and go end Raggeth forever"
+
+“Then keep the gold,” the king says. “You’ll need it for what waits.” The moth flutters down before your face, its small light trembling. “This is where I must leave you. I cannot go where he is — his dark would snuff me out in a breath. You go alone from here.”
+
+“But listen first, for this is how he is beaten. Raggeth’s rot is bound to this wood by the wood’s own count — and the wood will tell you the numbers, if you walk its whole length and pay attention. As you go, count three things. The resting-benches along the road — not these here by the pond, mind, but the ones from here onward to his hut. The feast-tables in the bright meadow. And the watching faces where the trail cuts through the fallen tree. Three true numbers. Carry them to him, name them aloud, and his binding breaks. You cannot learn them by cutting across — only by walking the road. So walk it.”
+
+It rests a moment against your cheek, light as ash. “Follow the red tree-arrows, and only them. You’ll see his hut across the hollow before the path reaches it; never leave the markers — the wood between is where the bones are. Go bravely. And come back.” The light lifts away, and then the moth is gone.
+
+· · · THE ROAD TO RAGGETH — INTO THE DEEP WOOD · · ·
+
+You cross from the pond and the red markers take you down into the deep wood — darker here than anywhere, no moth, no king, no fox, only you and the red arrows nailed to the black trees, one and then the next. For the first time all night, you are alone. The dark does not last. The trees thin, the ground rises in a long gentle climb, and the path carries you up, out of the gloom, toward a growing light ahead.
+
+· · · THE ROAD TO RAGGETH — THE WILDFLOWER MEADOW · · ·
+
+You come out into sudden light: a wide wildflower meadow, warm and gold and humming with bees, lovely past belief so near the dark one’s house. And Raggeth’s voice drifts sweet across it: “There now. Rest. You’ve come so far. The king has waited this long; he can wait a while more.” Benches sit among the flowers, set just so, inviting.
+
+[Count the resting-benches as you go — and remember, only those from the pond onward, never the pond’s own.]
+
+· · · THE ROAD TO RAGGETH — THE PICNIC PLACE · · ·
+
+The path leads on to a quiet picnic place, tables in the warm gold light, and the pull to stop is strong — the wood’s craftiest trick, not to scare you back but to keep you.
+
+[Count the feast-tables here in the meadow.]
+
+  >> YOU CHOOSE: "March straight through"
+
+You don’t trust the warmth for a heartbeat; you keep your eyes on the red arrows and go — counting the tables as you pass, careful not to lose the number in your hurry.
+
+· · · THE ROAD TO RAGGETH — THE FALLEN-TREE FACES · · ·
+
+You come to the fallen tree still keyed-up and wary, every sense sharp from refusing the meadow, and the trail cuts straight through the great trunk where the carved faces crowd thickest, watching from every bough around the gap.
+
+[Count the watching faces here at the fallen tree.]
+
+· · · THE ROAD TO RAGGETH — THE LAIR IN SIGHT · · ·
+
+Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. The path bends the long way round, and the cold voice wheedles: “Why walk so far? The hut is just there. Cut across; save your legs. Come straight to me.” But you remember the bones — and you remember you cannot know the wood’s numbers without walking its whole road.
+
+  >> YOU CHOOSE: "Cut across toward the hut"
+
+You step off the markers toward the close, easy hut — and the ground is not ground. The dark between the trees is the bone-field; it drags at your feet, and the corpse-light kindles ahead, smiling. This is how he takes travelers. The wood has you — but not yet. And you’d have reached him without the numbers, and lost anyway.
+
+     [You are pulled back — "Back to the markers — quickly"]
+
+· · · THE ROAD TO RAGGETH — THE HUT AND THE HATCH · · ·
+
+The long way round brings you to the hut at last — small and mean and very old, its boards weeping rot, the cauldron seething before it. Raggeth is a cold thinness in the air. On the hut’s face is a small black hatch, and the voice turns silky: “There’s a treasure behind that hatch — the king’s last gold, perhaps. Open it. Go on — open it, and see.”
+
+  >> YOU CHOOSE: "Open the hatch"
+
+Your hand goes to the latch — and a night’s worth of warnings catch you a beat too late: the hatch is not where the treasure is. It’s where his swarm is. Get back!
+
+     [You are pulled back — "Leave the hatch shut — back away"]
+
+· · · THE ROAD TO RAGGETH — THE COUNT IS THE WEAPON · · ·
+
+“So. The king’s little counter, come to my door.”
+
+The cauldron seethes, the rot crawling up green and sick. And you understand what the moth meant: the rot is bound to the wood by the wood’s own count, and to break it you must name the three true numbers aloud — the benches, the tables, the faces.
+
+First: the resting-benches along the road, counting only from the pond onward.
+
+  >> YOU GUESS: "Six" — wrong.
+
+     The cauldron flares green and Raggeth laughs. “You didn’t count them, did you?” Try again — the resting-benches, from the pond onward only.
+
+  >> YOU CHOOSE: "Five"
+
+“Five,” you say — and the first true number lands like a hammer-blow. The cauldron cracks; the green boil shudders; Raggeth’s sneer falters.
+
+· · · THE ROAD TO RAGGETH — THE SECOND NUMBER · · ·
+
+“Lucky,” Raggeth hisses, but the cold has thinned. The second number now: the feast-tables in the bright meadow.
+
+  >> YOU CHOOSE: "Four"
+
+“Four,” you say — and the second number lands; the cauldron splits further, and Raggeth’s voice climbs toward a snarl.
+
+· · · THE ROAD TO RAGGETH — THE LAST NUMBER · · ·
+
+The cauldron is cracked rim to foot now, leaking green; Raggeth is a fury with no warmth left. One number remains — the watching faces at the cut through the fallen tree.
+
+Count them once more in your memory — the faces crowded thick where the great trunk had fallen across the path.
+
+  >> YOU CHOOSE: "Seven"
+
+“Five, and four, and seven,” you say at last — and the wood’s own count closes around Raggeth, though you reached it the hard way, by guess and recount, the wood darkening at each wrong word. The cauldron screams and splits; the rot drains into the ground; and Raggeth comes apart with his pot, unraveling into nothing. The wood will live, and the king will rise. But it was clumsy and costly, and you’ll always know there was a cleaner road — that a sharper eye on the long walk would have spared the dark its last gloating. Still: you walked the whole dark way, you did not give in, and you named it true. That is no small thing. From the wreck you lift the heart of the crown; the three caps and the heart make it whole, and the king rises, and dawn comes.
+
+    ═══ ENDING: ✦ The Pyrrhic Crown ═══
+
+
+========================================================================
+WALK — 5 · THE QUIET SAVE
+Give the cake · gentle path · tiptoe past the dead · mend the crown and go home.
+Ending: ✦ The Long Watch (saved him — but you flinched when it counted).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Give the honey-cake"
+
+He eats slowly, gratefully, and when he is done his silver eye kindles like a struck coin. Strength returns to him by degrees. “Kindness,” he says softly, “is the first gold — rarer in this wood than any crown. You spent it on a dying old fox when you might have kept it for yourself.” From the moss he lifts a small golden cap and lays it in your palm. “I will not forget. When the dark is deepest, look for my eye.” He rises, unsteady but alive, and slips into the shadows ahead, going before you. You will not walk this wood alone.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to a small graveyard — a dozen old stones, leaning every which way in the grey light. These are the king’s knights, the last of the old mushroom-guard, who stood against Raggeth an age ago and fell to the last, and were never avenged. The wood forgot them. The rot has not — it creeps among the stones like spilled ink.
+
+At the center stands one great cracked stone, and at its foot a candle, long gone cold. “The last cap is here,” the moth breathes, “in the keeping of the dead. They will not give it to the timid. You must wake their captain — and you must not look away when he wakes.”
+
+  >> YOU CHOOSE: "Tiptoe quietly past"
+
+You cannot do it. You hold your breath and slip between the graves, quiet as the dead themselves, and you do not light the candle, and you do not wake the captain. The last cap you find at the graveyard’s edge, set upon a small stone — a young knight’s grave, one who fell too soon. You lift it with hands that will not stop shaking, and all across that little ground you feel the weight of eyes that hoped for more from you, and let you pass anyway. No knight rises to walk with you. But the fox is still ahead, and the moth is still at your shoulder, and that will have to be enough.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.
+
+“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Set the caps in the crown — your task is done"
+
+One by one you press the golden caps home into the bare ring of the crown, and light runs through it and steadies the king — but you flinched, once, on the way here, when it counted, and the ending is a quieter one. The king lives; the wood will live. No retinue of friends comes to walk you out; the moth lights you to the road, faithful to the last, and that is enough, and it is a little lonely. “You saved my forest,” the king says, gentler than a bell. “Go home in honor — and be a little braver next time. There is always a next time, in a wood.” The face-trees open their eyes as you pass, and watch you go, and do not quite smile. Your story is complete.
+
+    ═══ ENDING: ✦ The Long Watch ═══
+
+
+========================================================================
+WALK — 6 · THE COLD HERO
+KEEP the cake (the fox dies) · take the rugged road alone · earn all three caps
+anyway · mend the crown and walk home.
+Ending: ✦ The Gentle Dawn — alone (a stone you cannot set down).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Keep it for yourself"
+
+You close your hand around the honey-cake and step around him. The fox says nothing — only watches you pass with his one silver eye, and you feel that eye on your back long after the trees have hidden him. There, in the leaves where he lies, the first golden cap gleams; it was the king’s, and the fox had no strength left to guard it. You lift it. Behind you, the old fox lowers his head to the cold ground; he will not see the morning.
+
+And something in the wood feels the cruelty of it — a small coldness, given freely, in a place starved of warmth. It marks you. Not as his, not yet — the road ahead is still yours to choose — but the wood will remember the cold you carried in, and so, you suspect, will whatever stirred just now in the deep of the trees.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the rugged path (straight ahead)"
+
+You choose the hard road — straight on, down into the stony hollow, the longer and steeper way — and you choose it knowing exactly what it costs, for the gifts the king’s old friends keep there. “Clear-eyed, and bold with it,” the moth says, half a laugh and half a worry. “That is the second gold — and you’ll have need of the rest before this road is done.” The Cap of Cleverness settles warm in your pocket. The trail pitches down before you into the dark.
+
+     * You gather the Cap of Cleverness. *
+
+· · · THE RUGGED ROAD · R1 — THE MARKER TREE · · ·
+
+The rugged way tips downward past a leaning marker, into a hollow of black trees you cannot see the bottom of. You reach the marker alone — no one to send ahead, no one to walk beside. The hollow waits below, and the cold comes up out of it to meet you.
+
+  >> YOU CHOOSE: "Take a breath at the marker"
+
+You gather yourself a moment before the drop. Slower — but your heart is your own.
+
+· · · THE RUGGED ROAD · R2 — THE BOTTOM OF THE HILL · · ·
+
+You come down sure-footed and unhurried, the breath you caught at the marker still steady in you, and the trail levels and bends away right toward a stand of distant pines — your own footfalls the only sound on the flat. At your feet, among the leaf-litter, lie fallen branches — stout, straight, stick-high.
+
+  >> YOU CHOOSE: "Take a stick"
+
+You choose a good straight one, test your weight on it, tuck it under your arm. It’s nothing now, here on the flat — but there’s a hill between you and the king.
+
+· · · THE RUGGED ROAD · R3 — THE FAIRY SPRING · · ·
+
+The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.
+
+Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”
+
+You drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”
+
+  >> YOU CHOOSE: "Ask for a number to remember"
+
+“Then hold this,” she whispers. “Seven. When you stand before the dark one and must name the watching faces of the wood, you will be glad you carried it. Seven. Don’t let the fear knock it loose.” You don’t know yet what it means — but you will hold it.
+
+· · · THE RUGGED ROAD · R4 — THE TREE-FACE GROVE · · ·
+
+The path runs into a grove thick with carved faces — the watching wood, more awake here near the spring’s clean magic, eyes opening as you pass. They take you in, the lone walker on the hard road, and weigh you. “A friend of the king,” they murmur at last, trunk to trunk. “The fairy spoke of you. We have two gifts, and you may take one.”
+
+  >> YOU CHOOSE: "Ask the grove for strength on the road"
+
+Their warmth pours into you for what’s to come — the climb, and the dark beyond it. You’ll feel it carrying you up the hill.
+
+· · · THE RUGGED ROAD · R5 — THE STEEP INCLINE · · ·
+
+The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.
+
+But the grove’s warmth is already in your legs, a borrowed strength that meets the hill before your own does.
+
+You set your stick to the cold rock and haul up on it — glad past words you stooped for it at the bottom of the hill.
+
+  >> YOU CHOOSE: "Rest, then climb"
+
+You catch your breath, steady your heart, and then go slow and stubborn to the top without quitting. Not the fastest — but you did not stop.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You come over the last rise steady and unhurried, having taken the hill slow and stubborn.
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Set the caps in the crown — your task is done"
+
+One by one you press the golden caps home into the bare ring of the king’s crown — and the moment the third is set, light runs through it like dawn through water, and does not stop. It pours from the crown into the king, into the roots, out through the whole black wood; the rot draws back into the earth, and all around the pond the dying simply stops. The heart-well clears and rises, and King Bolete stands — tall, and shining, and saved. “You carried my crown out of the dark and made me whole,” he says, his voice a bell now. “Go home in honor.” And you walk home — but you walk it alone. No fox runs at your heel: you left him cold in the leaves at the start of the road, and a saved and singing forest does not give the dead back. The face-trees open their eyes to watch you pass, and some of them soften toward you, slowly — you did save them — though you carry the one small cruelty you let into the wood like a stone you cannot set down. You saved the king. You saved the forest. You did it with a cold place in you that the long night never quite warmed. Your story is complete.
+
+Far off in the deep wood a thin green smoke still rises — Raggeth, unbeaten, biding. But that is a tale for another day. Tonight, you have won.
+
+    ═══ ENDING: ✦ The Gentle Dawn ═══
+
+
+========================================================================
+WALK — 7 · THE SCARRED HERO
+KEEP the cake · gentle path · the dead see the mark on you — LIGHT the candle
+and face what you did · mend the crown.
+Ending: ✦ The Gentle Dawn — redeemed (a promise kept late).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Keep it for yourself"
+
+You close your hand around the honey-cake and step around him. The fox says nothing — only watches you pass with his one silver eye, and you feel that eye on your back long after the trees have hidden him. There, in the leaves where he lies, the first golden cap gleams; it was the king’s, and the fox had no strength left to guard it. You lift it. Behind you, the old fox lowers his head to the cold ground; he will not see the morning.
+
+And something in the wood feels the cruelty of it — a small coldness, given freely, in a place starved of warmth. It marks you. Not as his, not yet — the road ahead is still yours to choose — but the wood will remember the cold you carried in, and so, you suspect, will whatever stirred just now in the deep of the trees.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to the small graveyard, a dozen leaning stones in the grey light — the king’s old knights, who died resisting Raggeth an age ago, and were never avenged. But they do not stir for you the way they stir for other travelers. They are looking at you. They see something on you: the cold thing you did beneath the old tree, when a starving friend asked for bread and you closed your hand. The fox’s death clings to you like a smell, and the dead can smell it.
+
+The great stone splits, and the captain rises — vast, oak and toadstool, an age of grief in his ruined face — and he weighs you a long, cold moment. “Raggeth’s rot does not always come from outside, child,” he says, in a voice like a closing tomb. “Sometimes it begins as one small cold thing a heart does, and lets grow. You carry such a thing now. I can see it on you.” He turns to the cold candle at his feet. “Light it — face what you did, and choose to be better — and it will burn away. It will hurt; there is nothing harder than looking straight at the worst of yourself. But you will walk on clean. Or leave it dark, and keep your small cold thing, and we will both know what you are becoming.”
+
+  >> YOU CHOOSE: "Light the candle — face what you did"
+
+Your hands shake — not at the dead now, but at the harder thing: looking straight at the fox you left to die, and not turning away. You breathe on the wick. It catches. And it does hurt — a small, clean burning, the cold thing in you guttering out — and when it’s done you are lighter, and emptied, and yourself again. The captain bows. “Courage is not only facing the dark out there,” he says. “It is facing the dark in here. That is the last gold, and the hardest won. Go on — mend his crown. And carry the fox with you now: not as a weight, but as a promise.” The Cap of Courage is warm in your hand. You walk on a Hero — scarred, and clean.
+
+     * You gather the Cap of Courage. *
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+Three caps, cold in your hand, and the wood gone nearly black around you. The moth’s light is a dying ember now; it can barely lift from your shoulder. The bell — the king’s heart — tolls once more, so faint you feel it more than hear it, and the silence that follows runs on too long before the next.
+
+“Hurry,” the moth breathes. “He is almost gone. The path climbs from here — the pond lies above us, at the top of the wood, where the forest was born, and where, tonight, it may die.” The signpost points the way up into the dark. You climb.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still — yet no stars float in it, for the sky itself has gone dark. “The last of the king’s strength,” the moth murmurs, “pooled here, and waiting, while it holds.”
+
+You kneel at the king’s toadstool throne and show him the three golden caps — kindness, cleverness, courage, gathered the length of the wood. The dim old eyes find them, and something like dawn moves across his ruined face. “All three. Then you have already done a brave and a great thing — and what comes next is yours to choose.” His cracked hand lifts. “Set these in my crown now, and I am saved: the rot will heal, and you may go home in honor, your task done. No one could ask more of you.” His voice drops. “But know this before you choose. Raggeth still lives, deep in the wood, and he holds the heart of my crown — the last and truest gold. Save me now, and you save me for your lifetime. End him, and you save this wood forever. There is no shame in either road.”
+
+  >> YOU CHOOSE: "Set the caps in the crown — your task is done"
+
+One by one you press the golden caps home into the bare ring of the king’s crown, and light runs through it like dawn through water, and does not stop; the rot draws back, and all around the pond the dying simply stops, and King Bolete stands tall and shining and saved. “Go home in honor,” he says, his voice a bell. And you walk home alone — no fox at your heel; you saw to that, under the old tree, and you have made your peace with it the hard way. But the king is saved, the crown is mended, and the wood is greening behind you. You carry the fox with you now, not as a weight but as a promise kept late. The dawn is yours, and quieter than it might have been — and you have earned the quiet. Your story is complete.
+
+    ═══ ENDING: ✦ The Gentle Dawn ═══
+
+
+========================================================================
+WALK — 8 · THE PAWN'S BARGAIN
+KEEP the cake · gentle path · LEAVE THE CANDLE DARK — the road to the pond turns
+easy, the king does not beg, and you carry his gold to Raggeth to name your price.
+Ending: 🩸 The Enslavement (both exits shown — accept the dark, or tear free).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Keep it for yourself"
+
+You close your hand around the honey-cake and step around him. The fox says nothing — only watches you pass with his one silver eye, and you feel that eye on your back long after the trees have hidden him. There, in the leaves where he lies, the first golden cap gleams; it was the king’s, and the fox had no strength left to guard it. You lift it. Behind you, the old fox lowers his head to the cold ground; he will not see the morning.
+
+And something in the wood feels the cruelty of it — a small coldness, given freely, in a place starved of warmth. It marks you. Not as his, not yet — the road ahead is still yours to choose — but the wood will remember the cold you carried in, and so, you suspect, will whatever stirred just now in the deep of the trees.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to the small graveyard, a dozen leaning stones in the grey light — the king’s old knights, who died resisting Raggeth an age ago, and were never avenged. But they do not stir for you the way they stir for other travelers. They are looking at you. They see something on you: the cold thing you did beneath the old tree, when a starving friend asked for bread and you closed your hand. The fox’s death clings to you like a smell, and the dead can smell it.
+
+The great stone splits, and the captain rises — vast, oak and toadstool, an age of grief in his ruined face — and he weighs you a long, cold moment. “Raggeth’s rot does not always come from outside, child,” he says, in a voice like a closing tomb. “Sometimes it begins as one small cold thing a heart does, and lets grow. You carry such a thing now. I can see it on you.” He turns to the cold candle at his feet. “Light it — face what you did, and choose to be better — and it will burn away. It will hurt; there is nothing harder than looking straight at the worst of yourself. But you will walk on clean. Or leave it dark, and keep your small cold thing, and we will both know what you are becoming.”
+
+  >> YOU CHOOSE: "Leave it dark — keep the cold"
+
+You look at the cold candle, and the dead, and the long hard road of being good — and you do not light it. Why freeze and starve for a dying king and a dead fox? Let the wood rot. You’ll see to yourself. You turn from the candle and the dead — and a small voice you have not heard before, dry as old leaves and warm as a friend, speaks for the first time, pleased. “There now,” says Raggeth. “Don’t waste your light on the dead — they wasted theirs. Come to me, clever one, and you’ll never starve, never freeze, never lose again.” The dead sink back into their stones and do not try to stop you. Somehow that is the worst of it. You walk on — his, now, though you tell yourself you are only your own.
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+The way to the pond is easy now, and that’s the horror of it. The rot doesn’t touch you; the cold lets you pass; Raggeth’s voice keeps you warm company, naming all the ways the king failed you and all the ways he’ll reward you. You walk untroubled through a dying wood while it dies around you, and you tell yourself that’s wisdom, and not the first lie you’ve told yourself tonight.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still, and no stars float in it, for the sky itself has gone dark — the last of the king’s strength, pooled here and waiting, while it holds. You look at it the way you look at everything now: appraising, and unmoved.
+
+The pond, and the king on his throne, grey and cracked and nearly gone. He opens one dim eye, and looks at you — and at the gold in your hands — and he sees exactly what you are. He does not plead. “So. The dark has you.” His voice is no louder than a breath. “I’ll not beg; a king does not, and begging never turned a heart already turned. But someone should tell you true, at the end: the gold you carry could still mend my crown and save this wood. It is not too late for the wood.” A pause. “It is only, perhaps, too late for you. Do as you will. You always meant to.”
+
+  >> YOU CHOOSE: "Carry the gold to Raggeth — strike your bargain"
+
+You close your hand around the caps. Let the king die; Raggeth holds the power in this wood, and you mean to stand on the winning side of it. The king says nothing as you turn toward the deep wood. Raggeth’s voice is warm as a hearth. “Good. Oh, good. Come — bring your gift. You’ll be rewarded as he never rewarded you.”
+
+· · · THE ROAD TO RAGGETH — INTO THE DEEP WOOD · · ·
+
+The same red markers take you down into the deep wood — but it means something else for you now. You’re not solving anything; you’re going home, as Raggeth has taught you to think of it. His voice keeps you warm company in the dark, naming all the ways the king failed you, and all the ways he will not.
+
+· · · THE ROAD TO RAGGETH — THE WILDFLOWER MEADOW · · ·
+
+The trees thin and you come out into the wide wildflower meadow, warm and gold — and its warmth wraps you like approval now, not a trap; laid on, you tell yourself, for you. “There now,” Raggeth murmurs, fond. “You’ve chosen well. Rest, if you like. You’ve earned it.”
+
+· · · THE ROAD TO RAGGETH — THE PICNIC PLACE · · ·
+
+The path leads on to the quiet picnic place, tables in the gold light. You sit if you please and rise when you please; nothing here is testing you, you tell yourself. Why would it? You’re going home.
+
+· · · THE ROAD TO RAGGETH — THE FALLEN-TREE FACES · · ·
+
+The light dies and the trail cuts through the great fallen tree — and here the carved faces crowd thick, and as you pass, every one of them turns away from you, every carved eye closing as you come. You tell yourself you don’t care. Mostly you believe it.
+
+· · · THE ROAD TO RAGGETH — THE LAIR IN SIGHT · · ·
+
+Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. Raggeth wheedles you to cut across and save your legs. And why not, you think — the long way round is for the king’s errand-runners, and you are done running errands. But the bone-field is still the bone-field.
+
+  >> YOU CHOOSE: "Stay on the red markers"
+
+You keep the path, and his voice warms further, pleased you came so biddably.
+
+· · · THE ROAD TO RAGGETH — THE HUT AND THE HATCH · · ·
+
+The long way round brings you to the hut — small and mean, the cauldron seething. Raggeth is a cold gathered nothing in the air. He points you to the black hatch: “Your reward’s within, little one. Take it.”
+
+  >> YOU CHOOSE: "Leave the hatch shut"
+
+You don’t touch it. Even now, some caution holds — though you tell yourself it’s only good manners with a host.
+
+· · · THE ROAD TO RAGGETH — THE BARGAIN · · ·
+
+The cold gathered nothing that is Raggeth leans close. “You came,” he purrs. “And you brought it.” You hold out the king’s gold — the two caps, kindness and cleverness, all you gathered on the road — and you name your price: spare me, reward me, give me a place in the wood you’ll rule, let the rot never touch me.
+
+“Of course,” says Raggeth, sweet as honey. “Of course, clever one. Give it here.”
+
+And you set the king’s gold in the dark’s own hand.
+
+The instant you do, you understand. The rot was never going to spare you — the rot makes no bargains; it only makes more rot. It crawls up from the caps, over your hand, up your arm, cold and certain — and Raggeth laughs, not cruelly, almost fondly. “You brought me gold, little one. But you never brought courage — the one thing I could never take from a heart that kept it. And you?” The cold reaches toward your chest. “You gave yours away, back at the graves. Handed it to me yourself. There was never a bargain here. There was only ever this.”
+
+    ═══ ENDING: 🩸 The Enslavement ═══
+
+    IF YOU CHOOSE — "Accept the dark — THE END":
+
+    The cold closes over you, and the last warm thing in you goes out, and you are his — his creature, his new herald, one more cold voice in the wood to call the next traveler off the path. The king dies that night. The forest falls dark. And somewhere on the trail, in a sweet and friendly voice, you find yourself beginning to whisper to someone new: “Why walk so far? Cut across. Come straight to me.”
+
+    IF YOU CHOOSE — "Flee — tear free while an ember’s left":
+
+    Something in you — some last coal you hadn’t quite handed over — recoils, and you wrench your arm from the rot and run, the dark searing a mark into you that will never fully fade, out of the hut and down the red markers and away. You don’t stop until the trees thin and a real morning finds you. You’re alive. You’re free. You are not the same, and never will be — you saw exactly what you were willing to become, and how near you came to it. The king is gone, and the wood is rotting, and that is on you, and you’ll carry it. But you ran. That has to be worth something.
+
+
+========================================================================
+WALK — 9 · THE COLD WALK HOME
+KEEP the cake · leave the candle dark · then serve no one — pocket the gold and
+walk out on the king and the dark alike.
+Ending: ❄ The Cold Walk Home (you're fine — exactly as fine as you were).
+========================================================================
+
+· · · POST 1 — THE ENTRANCE · · ·
+
+A moth settles on the post beside you, its light guttering like a candle in a draft. “Traveler. Come close — closer, while my light still holds.” With every word the glow fades a little more. “I am the last of King Bolete’s messengers. The others, Lord Raggeth caught and snuffed out, one by one. I have flown a long way to find you, and I have not much left to burn.”
+
+Behind it, the wood is wrong — grey, too silent, the smell of rot on the cold air.
+
+“The king is dying. His crown is a ring of golden mushroom-caps — for what else would a mushroom-king wear? — and Lord Raggeth crept into the castle and tore three of those caps away. Where the crown goes dark, the forest follows. You can feel it already — the cold, the silence, the rot creeping root to root. By the last bell of nightfall the king’s heart will stop, and this wood will be Raggeth’s to rule: a kingdom of ash and bone. Three caps, scattered through the dark. Find them. Mend the crown. It is the only way left.”
+
+It presses something small into your hand. “A honey-cake. There is little kindness left in this wood, traveler — spend yours well. It may cost more than you think. Go now. And trust no light but mine.”
+
+· · · POST 2 — INTO THE FOREST · · ·
+
+You step off the road and the wood closes behind you like a held breath. The trees here are sick — bark gone black and weeping, leaves curled to ash. A small bird lies still in the path; the moth’s light passes over it and moves on, and does not look.
+
+The air just inside the wood is thick with biting flies — they find your face and hands at once, small and spiteful, Raggeth’s pettiest sentries, sent to fray your nerve before the true dark even begins. You wave them off and keep walking, and a few dozen steps on, as the sick trees close around you, they thin and fall away behind — his reach is short here, this near the edge. Whatever waits deeper in, it is not these.
+
+And the trees have faces — had you not noticed? Look again, as you walk. In the bark of the old ones: faces. Eyes and mouths and furrowed brows, watching you pass. “The forest’s old sentinels,” the moth says softly. “Awake since the first acorn fell. Once they sang to every traveler who came this way. But the king is dying, and one by one they have gone silent and still, their eyes drifting shut. They watch you now without a sound.”
+
+The moth gathers what light it has, and tells you plainly what waits ahead, so you cannot say you were not warned:
+
+“There are lights in this wood that wear a kind voice and a kind face, and they lead only to the bone-fields. There is a rot that spreads by touch and never, ever stops — it is the king’s dying, made into a thing that crawls. There are dead who do not rest, who guard to the grave what they died for. And there is Raggeth himself — who does not always kill what he catches. Sometimes he keeps it. Sometimes he turns it, and sends it back wearing your own face.”
+
+Far off, a bell tolls — slow, and then slower. “The king’s heart,” the moth murmurs. “Hear how it fails. Three caps: one lies where a dying friend keeps watch, one where a false light feeds, one among the dead who were never avenged. This is the road ahead, traveler. It does not get kinder than here.”
+
+  >> YOU CHOOSE: "Go on into the dark"
+
+You set your jaw and follow the leaning, half-rotted signpost deeper in. The moth’s light steadies, just a little, as if glad of company.
+
+· · · POST 3 — THE GREAT OLD TREE · · ·
+
+Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.
+
+“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.
+
+  >> YOU CHOOSE: "Keep it for yourself"
+
+You close your hand around the honey-cake and step around him. The fox says nothing — only watches you pass with his one silver eye, and you feel that eye on your back long after the trees have hidden him. There, in the leaves where he lies, the first golden cap gleams; it was the king’s, and the fox had no strength left to guard it. You lift it. Behind you, the old fox lowers his head to the cold ground; he will not see the morning.
+
+And something in the wood feels the cruelty of it — a small coldness, given freely, in a place starved of warmth. It marks you. Not as his, not yet — the road ahead is still yours to choose — but the wood will remember the cold you carried in, and so, you suspect, will whatever stirred just now in the deep of the trees.
+
+     * You gather the Cap of Kindness. *
+
+· · · POST 4 — THE FORK · · ·
+
+The path forks at a leaning, half-rotted post. To your right, the trail bends away gentle and even, winding off through the trees on level ground. Straight ahead, it pitches down into a dark hollow — stony, steep, and far longer, the harder of the two roads by a long mile. Both, the moth says, come at last to the same pond, and the sleeping king beyond it.
+
+“Two roads, and both of them true,” the moth says, hovering close. “The right-hand way is kinder to your legs, and quicker to the king. The straight way drops into the low ground — steeper, and longer, and lonelier. But the king’s oldest friends keep to that road, and there are gifts on it found nowhere else. Few choose it now.” It steadies before your face. “The crown wants gold of three kinds, and one of them is cleverness — which is not cunning, child, but clear sight: knowing a true thing when you meet it, and choosing it with open eyes. So choose. Not the easy road, nor the hard one — your road. Only know which you take, and why.”
+
+  >> YOU CHOOSE: "Take the gentle path (right)"
+
+You choose the right-hand way, level and kind, and you choose it knowing — quicker to the king, with strength saved for whatever waits at the water. “Clear-eyed,” the moth says. “That is the second gold.” The Cap of Cleverness settles warm in your pocket — earned not by a clever tongue but by seeing plainly and choosing well. The gentle trail bends away to the right, and you follow it.
+
+     * You gather the Cap of Cleverness. *
+
+· · · POST 5 — THE CEMETERY · · ·
+
+The trees give way to the small graveyard, a dozen leaning stones in the grey light — the king’s old knights, who died resisting Raggeth an age ago, and were never avenged. But they do not stir for you the way they stir for other travelers. They are looking at you. They see something on you: the cold thing you did beneath the old tree, when a starving friend asked for bread and you closed your hand. The fox’s death clings to you like a smell, and the dead can smell it.
+
+The great stone splits, and the captain rises — vast, oak and toadstool, an age of grief in his ruined face — and he weighs you a long, cold moment. “Raggeth’s rot does not always come from outside, child,” he says, in a voice like a closing tomb. “Sometimes it begins as one small cold thing a heart does, and lets grow. You carry such a thing now. I can see it on you.” He turns to the cold candle at his feet. “Light it — face what you did, and choose to be better — and it will burn away. It will hurt; there is nothing harder than looking straight at the worst of yourself. But you will walk on clean. Or leave it dark, and keep your small cold thing, and we will both know what you are becoming.”
+
+  >> YOU CHOOSE: "Leave it dark — keep the cold"
+
+You look at the cold candle, and the dead, and the long hard road of being good — and you do not light it. Why freeze and starve for a dying king and a dead fox? Let the wood rot. You’ll see to yourself. You turn from the candle and the dead — and a small voice you have not heard before, dry as old leaves and warm as a friend, speaks for the first time, pleased. “There now,” says Raggeth. “Don’t waste your light on the dead — they wasted theirs. Come to me, clever one, and you’ll never starve, never freeze, never lose again.” The dead sink back into their stones and do not try to stop you. Somehow that is the worst of it. You walk on — his, now, though you tell yourself you are only your own.
+
+· · · POST 6 — THE WAY TO THE POND · · ·
+
+The way to the pond is easy now, and that’s the horror of it. The rot doesn’t touch you; the cold lets you pass; Raggeth’s voice keeps you warm company, naming all the ways the king failed you and all the ways he’ll reward you. You walk untroubled through a dying wood while it dies around you, and you tell yourself that’s wisdom, and not the first lie you’ve told yourself tonight.
+
+· · · POST 7 — THE POND · · ·
+
+The climb brings you out at the pond — the old heart-well of the forest, whose waters rise and fall with the king’s own life.
+
+The water lies black and brimming and still, and no stars float in it, for the sky itself has gone dark — the last of the king’s strength, pooled here and waiting, while it holds. You look at it the way you look at everything now: appraising, and unmoved.
+
+The pond, and the king on his throne, grey and cracked and nearly gone. He opens one dim eye, and looks at you — and at the gold in your hands — and he sees exactly what you are. He does not plead. “So. The dark has you.” His voice is no louder than a breath. “I’ll not beg; a king does not, and begging never turned a heart already turned. But someone should tell you true, at the end: the gold you carry could still mend my crown and save this wood. It is not too late for the wood.” A pause. “It is only, perhaps, too late for you. Do as you will. You always meant to.”
+
+  >> YOU CHOOSE: "Take what you have and go home — leave them all to it"
+
+You’ll serve no one, dark or light. You’ll just go. You pocket the gold, turn your back on the dying king and the waiting dark both, and walk out the way you came.
+
+Behind you the forest goes quiet, and quieter, and the last of the king’s light winks out somewhere in the trees. You reach the trailhead as the rot reaches the wood’s edge. You’re fine. You’re exactly as fine as you were, and not one bit more. And in the years after, when you think of the wood at all, you’ll remember a dying king who would not beg, and a fox you let go cold under an old tree — and you’ll wonder, only sometimes, only late, what the other road might have made of you.
+
+    ═══ ENDING: ❄ The Cold Walk Home ═══
+
+
