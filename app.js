@@ -15,13 +15,13 @@
 (function () {
   'use strict';
 
-  var STORY_VERSION = 7;                                      // must equal story.json meta.version
+  var STORY_VERSION = 8;                                      // must equal story.json meta.version
   var STORY_URL = './data/story.json?v=' + STORY_VERSION;     // version-locked: this app.js can only
                                                              // ever load its OWN matching story.json,
                                                              // so a stale cache can't pair new code with
                                                              // old data (the cause of weird routing).
   var LS_KEY = 'ftw_state';
-  var SCHEMA = 5;   // bump when the story/state shape changes -> old saves are discarded
+  var SCHEMA = 6;   // bump when the story/state shape changes -> old saves are discarded
 
   var DATA = null;
   var states = {};
