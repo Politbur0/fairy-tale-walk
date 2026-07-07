@@ -149,6 +149,13 @@ for wid, node in wp.items():
     if bsf: w("_On arrival sets:_ %s"%bsf); w()
     if node.get('buildNote'): w("> **BUILD NOTE:** %s"%node['buildNote']); w()
     if node.get('scenes'):
+        # Waypoint-level narration (text / seasonalIntro / textCont / variants) renders
+        # at runtime BEFORE each scene's own content (a scene may override a field —
+        # e.g. its own seasonalIntro). Print it once here so the script is complete.
+        if any(node.get(k) for k in ('text','seasonalIntro','textCont','variants')):
+            w("_Shared narration — rendered first for every scene below (a scene may override a part of it):_")
+            w()
+            for line in render_narration(node): w(line); w()
         for si,sc in enumerate(node['scenes']):
             cn=cond(sc.get('when')) or 'default'
             stub=is_stub(sc.get('text'))

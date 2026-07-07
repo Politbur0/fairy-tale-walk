@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": 9,
+    "version": 10,
     "note": "Story is DATA. v7 = COMPLETE. Both roads written end to end. Cake (Post 3) is decoupled from road: give->fox_ally; keep->marked (the cold thing you did, not Raggeth's curse). Post 4 fork open to all, both arms set road=hero (provisional). Rugged=always Hero (fox_ally picks fox-alive/dead scenes). Pawn is sealed only on the GENTLE path: cemetery (wp5) gates on `marked` — unmarked=Hero cemetery; marked=redemption hinge: light candle->redeemed+Cap of Courage (road stays hero, rejoins Hero with 3 caps); leave dark->fallen+road=pawn, NO courage cap (pawn carries 2 caps: kindness+cleverness). wp6 and the Road to Raggeth (rg_*) and the pond gate on road: HERO->counting finale (5 benches from after the pond / 4 tables / 7 faces; retry=flare+escalating 2-per-number hints, never dead-ends; has_number AND !fumbled -> Crown Reborn else Pyrrhic); PAWN-> no counting, Raggeth flatters, faces turn away -> rg_enslave (bargain->rot->'never brought courage'; exit accept[THE END enslaved] or flee[bleak survival home]). Pawn pond also offers ABANDON -> The Cold Walk Home (THE END, bleak, safe). Hero home endings gate on fox_ally (fox-dead = solitary). Render order: text->choice result->seasonalIntro->textCont->variant->endingVariant->textAfter."
   },
   "config": {
@@ -125,7 +125,7 @@
           "title": "The Great Old Tree",
           "voice": "fox",
           "image": "crown/wp3.jpg",
-          "text": "Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.\n\n“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. This is the choice that sets your road.",
+          "text": "Beneath the oldest tree, in the last patch the rot has not yet reached, a fox with one silver eye lies in the leaves. He is little more than bone and grey fur, and his breath comes shallow. He has guarded this place since before the tree stood tall — and now he is starving, for the blight has killed everything he might have hunted.\n\n“I cannot move,” he says, and his voice is a thread. “I have not eaten in a week. I will not last the night.” Your hand finds the honey-cake. It is the only food you carry, and the night is long. Something tells you that much will turn on this.",
           "prompt": "Give him the honey-cake, or keep it?",
           "choices": [
             {
@@ -506,11 +506,11 @@
                       "has_stick"
                     ]
                   },
-                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.\n\nThe fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill the fairy’s flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
+                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.\n\nThe fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
                 },
                 {
                   "default": true,
-                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you climb down on your hands and heels, slipping the last foot to the water’s edge.\n\nThe fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill the fairy’s flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
+                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you climb down on your hands and heels, slipping the last foot to the water’s edge.\n\nThe fox laps once at the pool and settles at its edge, ears soft, as if he knows this place. Kneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
                 }
               ]
             },
@@ -550,11 +550,11 @@
                       "has_stick"
                     ]
                   },
-                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.\n\nKneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill the fairy’s flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
+                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you set your stick to the slope and pick your way down to the water, sure-footed and dry.\n\nKneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
                 },
                 {
                   "default": true,
-                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you climb down on your hands and heels, slipping the last foot to the water’s edge.\n\nKneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill the fairy’s flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
+                  "text": "The flat brings you in among the only pines on the walk — green, unrotted, resinous — and where the bank drops away to a clear spring among the roots, you climb down on your hands and heels, slipping the last foot to the water’s edge.\n\nKneel at the pool and the creaking pine bends low, and the fairy speaks — tiny, ancient, kind. “A traveler, on the king’s road, and brave for the stony way. Drink. Fill your flask. The spring feeds the king’s own heart-well, and it is the last clean water in the wood.”\n\nYou drink — so cold it aches, so clean it steadies you — and fill your flask. Then she says: “I’ll give you one thing more to carry. Choose.”"
                 }
               ]
             },
@@ -704,7 +704,7 @@
                       "has_stick"
                     ]
                   },
-                  "text": "The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.\n\nThe dark should be crowding you here, this close to the top, but it doesn’t: somewhere behind, the grove’s watching cousins are holding it off your heels, and you climb with your back unafraid.\n\nBut the fairy’s spring-water is still cold-strong in your legs, steadying them under you as the ground pitches up — you climb easier than a hill this cruel should allow.\n\nYou set your stick to the cold rock and haul up on it — glad past words you stooped for it at the bottom of the hill."
+                  "text": "The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.\n\nThe dark should be crowding you here, this close to the top, but it doesn’t: somewhere behind, the grove’s watching cousins are holding it off your heels, and you climb with your back unafraid.\n\nAnd the fairy’s spring-water is still cold-strong in your legs, steadying them under you as the ground pitches up — you climb easier than a hill this cruel should allow.\n\nYou set your stick to the cold rock and haul up on it — glad past words you stooped for it at the bottom of the hill."
                 },
                 {
                   "when": {
@@ -713,7 +713,7 @@
                       "has_strength"
                     ]
                   },
-                  "text": "The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.\n\nThe dark should be crowding you here, this close to the top, but it doesn’t: somewhere behind, the grove’s watching cousins are holding it off your heels, and you climb with your back unafraid.\n\nBut the fairy’s spring-water is still cold-strong in your legs, steadying them under you as the ground pitches up — you climb easier than a hill this cruel should allow."
+                  "text": "The flat ends and the trail rears up — steep, stony, dark — the last hard stretch to the king.\n\nThe dark should be crowding you here, this close to the top, but it doesn’t: somewhere behind, the grove’s watching cousins are holding it off your heels, and you climb with your back unafraid.\n\nAnd the fairy’s spring-water is still cold-strong in your legs, steadying them under you as the ground pitches up — you climb easier than a hill this cruel should allow."
                 },
                 {
                   "when": {
@@ -934,7 +934,11 @@
               ]
             },
             {
-              "default": true,
+              "when": {
+                "equals": {
+                  "road": "pawn"
+                }
+              },
               "voice": "king",
               "textCont": "The pond, and the king on his throne, grey and cracked and nearly gone. He opens one dim eye, and looks at you — and at the gold in your hands — and he sees exactly what you are. He does not plead. “So. The dark has you.” His voice is no louder than a breath. “I’ll not beg; a king does not, and begging never turned a heart already turned. But someone should tell you true, at the end: the gold you carry could still mend my crown and save this wood. It is not too late for the wood.” A pause. “It is only, perhaps, too late for you. Do as you will. You always meant to.”",
               "prompt": "What do you do?",
@@ -953,6 +957,18 @@
                     "tone": "bad",
                     "note": "❄ The Cold Walk Home"
                   }
+                }
+              ],
+              "seasonalIntro": [
+                {
+                  "when": "wet",
+                  "audio": "crown/wp7_full_pawn.mp3",
+                  "text": "The water lies black and brimming and still, and no stars float in it, for the sky itself has gone dark — the last of the king’s strength, pooled here and waiting, while it holds. You look at it the way you look at everything now: appraising, and unmoved."
+                },
+                {
+                  "when": "dry",
+                  "audio": "crown/wp7_dry_pawn.mp3",
+                  "text": "Where deep water should be there is only a cracked and shrinking hollow, a last puddle sinking into mud — the pond draining as the king does, nearly empty now. You look at it the way you look at everything now: appraising, and unmoved."
                 }
               ]
             }
@@ -1187,7 +1203,7 @@
                 }
               },
               "voice": "raggeth",
-              "text": "Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. Raggeth wheedles you to cut across and save your legs. You have no count to lose now — but the bone-field is still the bone-field.",
+              "text": "Through a gap you see it across the hollow — the black hut, the smoking cauldron. Close. Raggeth wheedles you to cut across and save your legs. And why not, you think — the long way round is for the king’s errand-runners, and you are done running errands. But the bone-field is still the bone-field.",
               "prompt": "Stay on the markers, or cut across?",
               "choices": [
                 {
@@ -1448,6 +1464,23 @@
                   "fumbled"
                 ],
                 "allTrue": [
+                  "has_number",
+                  "knight_ally"
+                ]
+              },
+              "audio": "crown/end_crown_reborn.mp3",
+              "ending": {
+                "tone": "good",
+                "note": "★ The Crown Reborn"
+              },
+              "text": "“Five, and four, and seven,” you say — and the fairy’s last gift returns to you clear at the very end, just as she promised it would. The wood’s own count closes around Raggeth like a fist. The cauldron screams and splits from rim to foot; the rot pours out into the starving ground and is gone; and Raggeth — the cold, the thinness, the dry voice — comes apart with his pot, unraveling into nothing with one last astonished sigh. Far off you hear the watching faces, every one, waking and glad. From the wreck you lift the last and truest gold — the heart of the king’s crown, that Raggeth held. You carry it home through a wood already greening behind you, and at the castle you set the three caps and the heart together into the crown, and it is whole — forever whole, this time — and King Bolete rises shining, and the long night ends in dawn. The forest is reborn, and it will not forget the one who saved it.\n\nAnd beside you the dead captain lowers his broken sword at last, an age of grief gone quiet in his ruined face. “We could not save the king,” he says — the words he has carried since the wood forgot him. “You did.” He bows, low, and does not rise; and where he stood there is only the first of the dawn — his word kept, his watch ended, his rest earned."
+            },
+            {
+              "when": {
+                "allFalse": [
+                  "fumbled"
+                ],
+                "allTrue": [
                   "has_number"
                 ]
               },
@@ -1462,6 +1495,22 @@
               "when": {
                 "allFalse": [
                   "fumbled"
+                ],
+                "allTrue": [
+                  "knight_ally"
+                ]
+              },
+              "audio": "crown/end_crown_reborn.mp3",
+              "ending": {
+                "tone": "good",
+                "note": "★ The Crown Reborn"
+              },
+              "text": "“Five, and four, and seven,” you say — and you counted every one of them yourself, on the long dark road, with no gift to lean on and no voice to remind you. The wood’s own count closes around Raggeth like a fist. The cauldron screams and splits from rim to foot; the rot pours out into the starving ground and is gone; and Raggeth — the cold, the thinness, the dry voice — comes apart with his pot, unraveling into nothing with one last astonished sigh. Far off you hear the watching faces, every one, waking and glad. From the wreck you lift the last and truest gold — the heart of the king’s crown, that Raggeth held. You carry it home through a wood already greening behind you, and at the castle you set the three caps and the heart together into the crown, and it is whole — forever whole, this time — and King Bolete rises shining, and the long night ends in dawn. You walked the whole dark way and missed nothing. The forest will not forget it.\n\nAnd beside you the dead captain lowers his broken sword at last, an age of grief gone quiet in his ruined face. “We could not save the king,” he says — the words he has carried since the wood forgot him. “You did.” He bows, low, and does not rise; and where he stood there is only the first of the dawn — his word kept, his watch ended, his rest earned."
+            },
+            {
+              "when": {
+                "allFalse": [
+                  "fumbled"
                 ]
               },
               "audio": "crown/end_crown_reborn.mp3",
@@ -1470,6 +1519,19 @@
                 "note": "★ The Crown Reborn"
               },
               "text": "“Five, and four, and seven,” you say — and you counted every one of them yourself, on the long dark road, with no gift to lean on and no voice to remind you. The wood’s own count closes around Raggeth like a fist. The cauldron screams and splits from rim to foot; the rot pours out into the starving ground and is gone; and Raggeth — the cold, the thinness, the dry voice — comes apart with his pot, unraveling into nothing with one last astonished sigh. Far off you hear the watching faces, every one, waking and glad. From the wreck you lift the last and truest gold — the heart of the king’s crown, that Raggeth held. You carry it home through a wood already greening behind you, and at the castle you set the three caps and the heart together into the crown, and it is whole — forever whole, this time — and King Bolete rises shining, and the long night ends in dawn. You walked the whole dark way and missed nothing. The forest will not forget it."
+            },
+            {
+              "when": {
+                "allTrue": [
+                  "knight_ally"
+                ]
+              },
+              "audio": "crown/end_pyrrhic.mp3",
+              "ending": {
+                "tone": "good",
+                "note": "✦ The Pyrrhic Crown"
+              },
+              "text": "“Five, and four, and seven,” you say at last — and the wood’s own count closes around Raggeth, though you reached it the hard way, by guess and recount, the wood darkening at each wrong word. The cauldron screams and splits; the rot drains into the ground; and Raggeth comes apart with his pot, unraveling into nothing. The wood will live, and the king will rise. But it was clumsy and costly, and you’ll always know there was a cleaner road — that a sharper eye on the long walk would have spared the dark its last gloating. Still: you walked the whole dark way, you did not give in, and you named it true. That is no small thing. From the wreck you lift the heart of the crown; the three caps and the heart make it whole, and the king rises, and dawn comes.\n\nAnd the dead captain, who did not look away and did not let you look away, bows to you through the green smoke of the wreck. “We could not save the king,” he says. “You did — and none of us will measure how.” Then his watch ends at last, and the dawn takes him home to his stones."
             },
             {
               "default": true,

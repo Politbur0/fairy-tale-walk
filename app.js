@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var STORY_VERSION = 9;                                      // must equal story.json meta.version
+  var STORY_VERSION = 10;                                      // must equal story.json meta.version
   var STORY_URL = './data/story.json?v=' + STORY_VERSION;     // version-locked: this app.js can only
                                                              // ever load its OWN matching story.json,
                                                              // so a stale cache can't pair new code with
